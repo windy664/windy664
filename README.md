@@ -21,3 +21,5 @@ Here are some ideas to get you started:
 ![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=windy664)
 
 ![IceEnd's GitHub stats](https://github-immortality.vercel.app/api?username=windy664)
+
+![GitHub Streak](https://streak-stats.demolab.com/?user=windy664)
