@@ -23,3 +23,5 @@ Here are some ideas to get you started:
 ![IceEnd's GitHub stats](https://github-immortality.vercel.app/api?username=windy664)
 
 ![GitHub Streak](https://streak-stats.demolab.com/?user=windy664)
+
+![](https://stats.justsong.cn/api/leetcode?username=windy664&cn=true)
