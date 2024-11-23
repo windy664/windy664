@@ -25,3 +25,5 @@ Here are some ideas to get you started:
 ![GitHub Streak](https://streak-stats.demolab.com/?user=windy664)
 
 ![](https://stats.justsong.cn/api/leetcode?username=windy664&cn=true)
+
+![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)
