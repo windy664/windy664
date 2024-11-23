@@ -17,3 +17,5 @@ Here are some ideas to get you started:
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=windy664)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=windy664)
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=page.id&left_color=green&right_color=red)
