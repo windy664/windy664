@@ -34,3 +34,11 @@ Here are some ideas to get you started:
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Peter-JXL/Peter-JXL/output/github-contribution-grid-snake.svg">
 </picture>
 
+# 电化学综合
+
+---
+## 一、金属的腐蚀
+### 1、金属腐蚀
+&emsp;&emsp;金属or合金
+函数式：$f(x)=\frac{P(x)}{Q(x)}$
+$\sqrt{3x-1}+\sqrt[5]{2y^5-4}$
