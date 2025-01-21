@@ -13,7 +13,6 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=windy664)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=windy664)
@@ -27,6 +26,8 @@ Here are some ideas to get you started:
 ![](https://stats.justsong.cn/api/leetcode?username=windy664&cn=true)
 
 ![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)
+
+-->
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Peter-JXL/Peter-JXL/output/github-contribution-grid-snake-dark.svg">
