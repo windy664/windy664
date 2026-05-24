@@ -12,7 +12,7 @@
 - ⚙️ **Distributed Systems & Data:** Experienced in cross-server data synchronization (`FTBQuestsSync`), database management, and asynchronous task processing.
 - 🤖 **Automation & Bots:** Developed `XingtuBot-Spigot` to bridge game servers with automated robot interactions.
 - 🎨 **Beyond Code:** A visual creator (Photography/Video Editing/PS) who believes elegant system architecture and excellent visual design share the same pursuit of perfection.
-- 🌱 **Currently exploring:** Applying my solid engineering foundation to AI integrations, IoT (Arduino), and modern cloud deployments (Docker).
+- 🌱 **AI-Empowered Development:** Adept at utilizing Advanced Prompt Engineering to accelerate Java development, refactor legacy code, and profile complex JVM memory leaks.
 
 <br/>
 
@@ -41,8 +41,5 @@
 <br/>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=windy664&show_icons=true&theme=tokyonight" alt="windy664's GitHub stats" width="48%"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=windy664&layout=compact&theme=tokyonight" alt="Top Langs" width="48%"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=windy664&show_icons=true&theme=default" alt="windy664's GitHub stats" width="50%"/>
 </p>
-
-<br/>
