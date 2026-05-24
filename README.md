@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm windy664 (风吟)</h1>
+<h1 align="center">Hi 👋, I'm windy664 </h1>
 <h3 align="center">🚀 Java Backend Developer | System Architecture Enthusiast</h3>
 
 <p align="center">
