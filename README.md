@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm windy664 </h1>
+<h1 align="center">Hi 👋, I'm windy664 (风吟)</h1>
 <h3 align="center">🚀 Java Backend Developer | System Architecture Enthusiast</h3>
 
 <p align="center">
@@ -33,12 +33,15 @@
 <br/>
 
 ### 🏆 Featured Open Source Projects
-* **[FTBQuestsSync]** - Cross-server data synchronization system relying on file I/O, solving data consistency across distributed nodes.
-* **[XingtuBot-Spigot]** - A Spigot plugin bridging server ecosystems with automated bots.
-* **[AntiLoop & Harvestplugin]** - High-performance gameplay mechanic plugins optimized for modern server versions (Spigot 1.21).
+* **[FTBQuestsSync](https://github.com/windy664/FTBQuestsSync)** - Cross-server data synchronization system relying on file I/O, solving data consistency across distributed nodes.
+* **[XingtuBot-Spigot](https://github.com/windy664/XingtuBot-Spigot)** - A Spigot plugin bridging server ecosystems with automated bots.
+* **[AntiLoop](https://github.com/windy664/AntiLoop)** & **[Harvestplugin](https://github.com/windy664/Harvestplugin)** - High-performance gameplay mechanic plugins optimized for modern server versions (Spigot 1.21).
 
 <br/>
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=windy664&show_icons=true&theme=tokyonight" alt="windy664's GitHub stats" width="48%"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=windy664&layout=compact&theme=tokyonight" alt="Top Langs" width="48%"/>
 </p>
+
+<br/>
