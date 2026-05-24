@@ -40,7 +40,7 @@
 * **[FTBQuestsSync](https://github.com/windy664/FTBQuestsSync)** - 🌐 **Distributed Systems**
     * Cross-server data synchronization system relying on file I/O, solving data consistency across distributed nodes.
 * **[XingtuBot-Spigot](https://github.com/windy664/XingtuBot-Spigot)** - 🤖 **Automation**
-    * A Spigot plugin bridging server ecosystems with automated bots.
+    * A Spigot plugin bridging server ecosystems with bots.
 * **[AntiLoop](https://github.com/windy664/AntiLoop) & [Harvestplugin](https://github.com/windy664/Harvestplugin)** - 🚀 **High Performance**
     * Gameplay mechanic plugins optimized for modern server versions (Spigot 1.21).
 
