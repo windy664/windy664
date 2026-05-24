@@ -44,7 +44,3 @@
     * Gameplay mechanic plugins optimized for modern server versions (Spigot 1.21).
 
 <br/>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=windy664&show_icons=true&theme=default&cache_seconds=86400" alt="windy664's GitHub stats" width="50%"/>
-</p>
