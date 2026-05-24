@@ -24,6 +24,10 @@
   
   <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> 
   <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a> 
+
+  <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank" rel="noreferrer"> 
+    <img src="https://img.shields.io/badge/Prompt_Engineering-412991?style=flat-square&logo=openai&logoColor=white" alt="prompt engineering" height="40"/> 
+  </a>
 </p>
 
 <br/>
