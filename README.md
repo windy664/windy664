@@ -47,10 +47,12 @@
 
 <br/>
 
+<br/>
+
 ### 🌍 Open Source Community & Active Engagement
-* **[Teneted Organization]** - 👻 **Community Mascot & Active Member**
+* **[Teneted Organization](https://github.com/Teneted)** - 👻 **Community Mascot & Active Member**
     * The proud "Mascot" of the Teneted org. Actively engaging with top-tier developers in the Minecraft Hybrid Server (Forge/Fabric) ecosystem, fostering community culture, and tracking the latest architectural discussions.
-* **[Arclight & Server Ecosystems]** - 🐞 **Active Debugger & Issue Reporter**
+* **[Arclight & Server Ecosystems](https://github.com/IzzelAliz/Arclight)** - 🐞 **Active Debugger & Issue Reporter**
     * Deeply involved in the bleeding-edge testing of major open-source hybrid servers (e.g., Arclight 1.21.1 Neoforge). Experienced in locating and reporting complex `NullPointerException` and cross-world architectural bugs in deep JVM environments.
-* **[LLM Agent Integrations]** - 🤖 **Community Feedback**
+* **[LLM Agent Integrations](https://github.com/NousResearch/hermes-agent)** - 🤖 **Community Feedback**
     * Actively exploring the open-source AI community (e.g., `NousResearch/hermes-agent`), testing and providing technical feedback on bridging large language models with local social ecosystems (WeChat/QQ).
