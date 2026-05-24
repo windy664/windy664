@@ -8,7 +8,7 @@
 <br/>
 
 ### 💡 About Me
-- 🛠️ **Hardcore Backend Engineering:** Deeply experienced in the Java ecosystem. Specialized in high-concurrency server development and plugin architecture (e.g., Spigot API, Mixin).
+- 🛠️ **Hardcore Backend Engineering:** Deeply experienced in the Java ecosystem. Specialized in high-concurrency server development and JVM runtime architecture (e.g., Spigot API, Mixin).
 - ⚙️ **Distributed Systems & Data:** Experienced in cross-server data synchronization (`FTBQuestsSync`), database management, and asynchronous task processing.
 - 🤖 **Automation & Bots:** Developed `XingtuBot-Spigot` to bridge game servers with automated robot interactions.
 - 🎨 **Beyond Code:** A visual creator (Photography/Video Editing/PS) who believes elegant system architecture and excellent visual design share the same pursuit of perfection.
@@ -34,12 +34,17 @@
 <br/>
 
 ### 🏆 Featured Open Source Projects
-* **[FTBQuestsSync](https://github.com/windy664/FTBQuestsSync)** - Cross-server data synchronization system relying on file I/O, solving data consistency across distributed nodes.
-* **[XingtuBot-Spigot](https://github.com/windy664/XingtuBot-Spigot)** - A Spigot plugin bridging server ecosystems with automated bots.
-* **[AntiLoop](https://github.com/windy664/AntiLoop)** & **[Harvestplugin](https://github.com/windy664/Harvestplugin)** - High-performance gameplay mechanic plugins optimized for modern server versions (Spigot 1.21).
+* **[Windymixin](https://github.com/windy664/Windymixin)** - ⚙️ **Hardcore JVM / Bytecode**
+    * Advanced JVM bytecode manipulation and runtime injection framework utilizing Mixin. Demonstrates deep understanding of Java class loading and underlying server architecture.
+* **[FTBQuestsSync](https://github.com/windy664/FTBQuestsSync)** - 🌐 **Distributed Systems**
+    * Cross-server data synchronization system relying on file I/O, solving data consistency across distributed nodes.
+* **[XingtuBot-Spigot](https://github.com/windy664/XingtuBot-Spigot)** - 🤖 **Automation**
+    * A Spigot plugin bridging server ecosystems with automated bots.
+* **[AntiLoop](https://github.com/windy664/AntiLoop) & [Harvestplugin](https://github.com/windy664/Harvestplugin)** - 🚀 **High Performance**
+    * Gameplay mechanic plugins optimized for modern server versions (Spigot 1.21).
 
 <br/>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=windy664&show_icons=true&theme=default" alt="windy664's GitHub stats" width="50%"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=windy664&show_icons=true&theme=default&cache_seconds=86400" alt="windy664's GitHub stats" width="50%"/>
 </p>
