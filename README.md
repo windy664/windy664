@@ -43,12 +43,6 @@
 * **[AntiLoop](https://github.com/windy664/AntiLoop) & [Harvestplugin](https://github.com/windy664/Harvestplugin)** - 🚀 **High Performance**
     * Gameplay mechanic plugins optimized for modern server versions (Spigot 1.21).
 
-<br/>
-
-<br/>
-
-<br/>
-
 ### 🌍 Open Source Community & Active Engagement
 * **[Teneted Organization](https://github.com/Teneted)** - 👻 **Community Mascot & Active Member**
     * The proud "Mascot" of the Teneted org. Actively engaging with top-tier developers in the Minecraft Hybrid Server (Forge/Fabric) ecosystem, fostering community culture, and tracking the latest architectural discussions.
