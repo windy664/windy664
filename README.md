@@ -33,16 +33,3 @@
   <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank"><img src="https://img.shields.io/badge/Prompt_Engineering-412991?style=flat-square&logo=openai&logoColor=white" alt="prompt engineering" height="40"/></a>
 </p>
 
-<br/>
-
-### 🏆 Featured Open Source Projects
-* **[Windymixin](https://github.com/windy664/Windymixin)** - ⚙️ **Hardcore JVM / Bytecode**
-    * Advanced JVM bytecode manipulation and runtime injection framework utilizing Mixin. Demonstrates deep understanding of Java class loading and underlying server architecture.
-* **[FTBQuestsSync](https://github.com/windy664/FTBQuestsSync)** - 🌐 **Distributed Systems**
-    * Cross-server data synchronization system relying on file I/O, solving data consistency across distributed nodes.
-* **[XingtuBot-Spigot](https://github.com/windy664/XingtuBot-Spigot)** - 🤖 **Automation**
-    * A Spigot plugin bridging server ecosystems with bots.
-* **[AntiLoop](https://github.com/windy664/AntiLoop) & [Harvestplugin](https://github.com/windy664/Harvestplugin)** - 🚀 **High Performance**
-    * Gameplay mechanic plugins optimized for modern server versions (Spigot 1.21).
-
-<br/>
