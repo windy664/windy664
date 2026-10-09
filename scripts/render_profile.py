@@ -1,12 +1,68 @@
 """Regenerate the self-contained profile artwork: python3 scripts/render_profile.py."""
 from html import escape
 from pathlib import Path
+import re
 OUT = Path(__file__).resolve().parents[1] / 'assets'
 OUT.mkdir(exist_ok=True)
 def text(x,y,value,size=16,color='#aab4d0',weight=400,mono=False,extra=''):
     font='Consolas,monospace' if mono else 'Inter,Segoe UI,Arial,sans-serif'
     return f'<text x="{x}" y="{y}" font-family="{font}" font-size="{size}" fill="{color}" font-weight="{weight}" {extra}>{escape(value)}</text>'
+
+
+def motion(name, w, h, body):
+    """Animate decorative layers inside GitHub-compatible, self-contained SVGs."""
+    style = '''<style>
+    @keyframes breathe { 0%,100% { opacity:.35 } 50% { opacity:1 } }
+    @keyframes drift { 0%,100% { transform:translate(0,0) } 50% { transform:translate(-32px,14px) } }
+    @keyframes orbit { to { transform:rotate(360deg) } }
+    @keyframes borderflow { to { stroke-dashoffset:-1000 } }
+    @keyframes scan { 0%,15% { transform:translateX(-110%) } 75%,100% { transform:translateX(110%) } }
+    @keyframes arrow { 0%,100% { transform:translate(0,0) } 50% { transform:translate(3px,-3px) } }
+    @keyframes spectrum { 0%,100% { stop-color:#5ee7f7 } 33% { stop-color:#b392ff } 66% { stop-color:#ff8abc } }
+    .pulse { animation:breathe 4s ease-in-out infinite }
+    .drift { animation:drift 12s ease-in-out infinite }
+    .orbit { animation:orbit 24s linear infinite }
+    .reverse { animation-direction:reverse; animation-duration:18s }
+    .flow { animation:borderflow 16s linear infinite }
+    .scan { animation:scan 9s ease-in-out infinite; transform-box:view-box }
+    .arrow { animation:arrow 3s ease-in-out infinite }
+    #spectrum stop { animation:spectrum 12s ease-in-out infinite }
+    #spectrum stop:nth-child(2) { animation-delay:-3s }
+    #spectrum stop:nth-child(3) { animation-delay:-6s }
+    #spectrum stop:nth-child(4) { animation-delay:-9s }
+    @media (prefers-reduced-motion:reduce) { * { animation:none !important } .scan { display:none } }
+    </style>'''
+    # Pulse status lights and toolbox dots at different phases.
+    counter = iter(range(100))
+    body = re.sub(r'<circle ([^>]*r="4"[^>]*)/>',
+                  lambda m: f'<circle {m[1]} class="pulse" style="animation-delay:-{next(counter)*.37}s"/>', body)
+    body = body.replace('<ellipse cx=', '<ellipse class="drift" cx=')
+    if name == 'hero.svg':
+        # CSS keeps the orbit animation responsive to reduced-motion preferences.
+        body = body.replace('<g><circle cx="-112"', '<g class="orbit"><circle cx="-112"')
+        body = body.replace('<g><circle cx="87"', '<g class="orbit reverse"><circle cx="87"')
+        body = re.sub(r'<animateTransform[^>]*/>', '', body)
+        body += '<rect x="154" y="96" width="7" height="14" rx="1" fill="#b3a2ff" class="pulse"/>'
+        # Sparse stars occupy the orbital area, leaving the copy untouched.
+        for i, (x, y) in enumerate([(575,70),(635,309),(906,104),(932,276),(555,350),(863,346),(698,83)]):
+            body += f'<circle cx="{x}" cy="{y}" r="1.8" fill="#bcbdff" class="pulse" style="animation-delay:-{i*.6}s"/>'
+    if name.startswith('about'):
+        body = re.sub(r'<rect ([^>]*width="3"[^>]*)/>', r'<rect \1 class="pulse"/>', body)
+        # A small signal meter in the header adds movement without moving text.
+        for i in range(9):
+            height = [5,10,17,11,21,14,8,16,6][i]
+            body += f'<rect x="{w-85+i*5}" y="{43-height}" width="2" height="{height}" rx="1" fill="#a997ff" class="pulse" style="animation-delay:-{i*.32}s"/>'
+    if name.startswith('nav-'):
+        body = body.replace('text-anchor="end"', 'text-anchor="end" class="arrow"')
+    # The low-opacity beam passes behind the content; it never covers the text.
+    beam = f'''<defs><linearGradient id="beam"><stop stop-color="#8ce8ff" stop-opacity="0"/><stop offset=".5" stop-color="#a393ff" stop-opacity=".09"/><stop offset="1" stop-color="#ff9dce" stop-opacity="0"/></linearGradient></defs><g class="scan"><path d="M0 0H{w*.16}L{w*.3} {h}H{w*.14}Z" fill="url(#beam)"/></g>'''
+    # A moving highlight traces the existing panel edge.
+    edge = f'<rect x="1.5" y="1.5" width="{w-3}" height="{h-3}" rx="23" fill="none" stroke="url(#spectrum)" stroke-width="1.3" stroke-opacity=".55" stroke-dasharray="90 410" class="flow"/>'
+    return style + beam + body + edge
+
+
 def svg(name,w,h,title,body):
+    body = motion(name, w, h, body)
     defs='''<defs><linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5ee7f7"/><stop offset=".36" stop-color="#9c83ff"/><stop offset=".7" stop-color="#fb77b6"/><stop offset="1" stop-color="#ffc778"/></linearGradient><radialGradient id="violet"><stop stop-color="#7951e8" stop-opacity=".36"/><stop offset="1" stop-color="#7951e8" stop-opacity="0"/></radialGradient><radialGradient id="cyan"><stop stop-color="#27cecb" stop-opacity=".2"/><stop offset="1" stop-color="#27cecb" stop-opacity="0"/></radialGradient><pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#929acb" stroke-opacity=".07"/></pattern></defs>'''
     (OUT/name).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title"><title id="title">{escape(title)}</title>{defs}<defs><clipPath id="panel"><rect width="{w}" height="{h}" rx="24"/></clipPath></defs><g clip-path="url(#panel)"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="24" fill="#0c1020" stroke="#2a304b"/>{body}</g></svg>\n')
 hero='<rect x="1" y="1" width="978" height="398" rx="24" fill="url(#grid)"/><ellipse cx="780" cy="130" rx="320" ry="270" fill="url(#violet)"/><ellipse cx="160" cy="380" rx="300" ry="220" fill="url(#cyan)"/>'
