@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hero.svg" width="100%" alt="Hi, I'm windy664 — Java / JVM, Minecraft, and AI agents. Code with logic. Create with color." />
+  <img src="./assets/hero.svg" width="100%" alt="Hi, I'm Torine — Java / JVM, Minecraft, and AI agents. Code with logic. Create with color." />
 </p>
 
 <p align="center">
