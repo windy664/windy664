@@ -37,7 +37,7 @@ def motion(name, w, h, body):
     body = re.sub(r'<circle ([^>]*r="4"[^>]*)/>',
                   lambda m: f'<circle {m[1]} class="pulse" style="animation-delay:-{next(counter)*.37}s"/>', body)
     body = body.replace('<ellipse cx=', '<ellipse class="drift" cx=')
-    if name == 'hero.svg':
+    if name == 'torine-hero.svg':
         # CSS keeps the orbit animation responsive to reduced-motion preferences.
         body = body.replace('<g><circle cx="-112"', '<g class="orbit"><circle cx="-112"')
         body = body.replace('<g><circle cx="87"', '<g class="orbit reverse"><circle cx="87"')
@@ -46,7 +46,7 @@ def motion(name, w, h, body):
         # Sparse stars occupy the orbital area, leaving the copy untouched.
         for i, (x, y) in enumerate([(575,70),(635,309),(906,104),(932,276),(555,350),(863,346),(698,83)]):
             body += f'<circle cx="{x}" cy="{y}" r="1.8" fill="#bcbdff" class="pulse" style="animation-delay:-{i*.6}s"/>'
-    if name.startswith('about'):
+    if name.startswith('torine-about'):
         body = re.sub(r'<rect ([^>]*width="3"[^>]*)/>', r'<rect \1 class="pulse"/>', body)
         # A small signal meter in the header adds movement without moving text.
         for i in range(9):
@@ -75,7 +75,7 @@ hero+=text(46,283,'Building systems. Exploring possibilities.',17,'#aeb9d7')
 for x,label,color in [(44,'JAVA / JVM','#ffc778'),(184,'MINECRAFT','#77efd0'),(324,'AI AGENTS','#c0a1ff')]:
     hero+=f'<rect x="{x}" y="323" width="128" height="32" rx="16" fill="{color}" fill-opacity=".09" stroke="{color}" stroke-opacity=".35"/>'+text(x+64,344,label,11,color,600,True,'text-anchor="middle"')
 hero+='''<g transform="translate(768 213)"><circle r="111" fill="none" stroke="#a68cff" stroke-opacity=".16"/><circle r="87" fill="none" stroke="#a68cff" stroke-opacity=".2" stroke-dasharray="3 9"/><ellipse rx="132" ry="48" transform="rotate(-32)" fill="none" stroke="url(#spectrum)" stroke-width="1.5"/><ellipse rx="132" ry="48" transform="rotate(42)" fill="none" stroke="url(#spectrum)" stroke-opacity=".45"/><path d="M0 -70 61 -35 61 35 0 70 -61 35 -61 -35Z" fill="#a487ff" fill-opacity=".1" stroke="url(#spectrum)" stroke-width="2"/><path d="M-61 -35 0 0 61 -35M0 0V70M0 -70V0L-61 35M0 0 61 35" fill="none" stroke="url(#spectrum)" stroke-opacity=".5"/><circle r="8" fill="#dbbfff"/><g><circle cx="-112" cy="0" r="5" fill="#62e8ef"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/></g><g><circle cx="87" cy="0" r="4" fill="#ff91c5"/><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="16s" repeatCount="indefinite"/></g></g><path d="M44 385H936" stroke="url(#spectrum)" stroke-width="2" stroke-opacity=".6"/>'''
-svg('hero.svg',980,400,'Torine — Java, Minecraft & AI agents. Code with logic. Create with color.',hero)
+svg('torine-hero.svg',980,400,'Torine — Java, Minecraft & AI agents. Code with logic. Create with color.',hero)
 stack=text(32,40,'02 / MY TOOLBOX',13,'#c4b5fd',700,True)+text(948,40,'BUILD / CONNECT / CREATE',11,'#8995b8',mono=True,extra='text-anchor="end"')
 for row,items in enumerate([[('Java','#ffbe7b'),('Kotlin','#c6a0ff'),('Python','#ffe28a'),('Rust','#f7a58c'),('Maven','#ff8fac')],[('MySQL','#7dcfff'),('Redis','#ff8797'),('Docker','#70c5ff'),('Git','#ffa38a'),('Arduino','#69e0d1')]]):
     for col,(label,color) in enumerate(items):
@@ -86,10 +86,10 @@ footer='<ellipse cx="490" cy="140" rx="450" ry="150" fill="url(#violet)"/><path 
 footer+=text(490,55,'STAY CURIOUS. KEEP BUILDING.',25,'url(#spectrum)',800,extra='text-anchor="middle" letter-spacing="2"')
 footer+=text(490,89,'One more idea. One more line. A whole new world.',16,'#b4bfdc',extra='text-anchor="middle"')
 footer+=text(490,125,'TORINE  /  CODE × CREATIVITY',10,'#8a96b6',mono=True,extra='text-anchor="middle" letter-spacing="2"')
-svg('footer.svg',980,152,'Stay curious. Keep building. One more idea. One more line. A whole new world.',footer)
+svg('torine-footer.svg',980,152,'Stay curious. Keep building. One more idea. One more line. A whole new world.',footer)
 
 # Keep every section in the same visual system; provide readable narrow layouts.
-about = text(40, 43, '01 / BEHIND THE CODE', 13, '#c4b5fd', 700, True)
+about = text(40, 43, '01 / ABOUT TORINE', 13, '#c4b5fd', 700, True)
 about += text(40, 91, 'Java at heart. Curious by nature.', 30, '#eef2ff', 700)
 for y, label, detail, color in [
     (143, 'BUILD', 'Minecraft plugins, backend systems, and cross-server data sync.', '#75e4ed'),
@@ -99,8 +99,8 @@ for y, label, detail, color in [
     about += f'<rect x="40" y="{y-15}" width="3" height="41" rx="1.5" fill="{color}"/>'
     about += text(57, y, label, 11, color, 700, True)
     about += text(57, y+26, detail, 19, '#b4bfdc')
-svg('about.svg', 980, 330, 'Java at heart. Curious by nature. Building backend systems, exploring AI agents, and creating through photography and design.', about)
-mobile = text(28, 40, '01 / BEHIND THE CODE', 12, '#c4b5fd', 700, True)
+svg('torine-about.svg', 980, 330, 'Torine — Java at heart. Curious by nature. Building backend systems, exploring AI agents, and creating through photography and design.', about)
+mobile = text(28, 40, '01 / ABOUT TORINE', 12, '#c4b5fd', 700, True)
 mobile += text(28, 87, 'Java at heart.', 30, '#eef2ff', 700)
 mobile += text(28, 124, 'Curious by nature.', 30, '#eef2ff', 700)
 for y, label, lines, color in [
@@ -111,7 +111,7 @@ for y, label, lines, color in [
     mobile += f'<rect x="28" y="{y-14}" width="3" height="64" rx="1.5" fill="{color}"/>'
     mobile += text(44, y, label, 11, color, 700, True)
     for i, line in enumerate(lines): mobile += text(44, y+26+i*24, line, 18, '#b4bfdc')
-svg('about-mobile.svg', 480, 446, 'Java at heart. Curious by nature. Backend systems, AI agents, photography, video editing, and design.', mobile)
+svg('torine-about-mobile.svg', 480, 446, 'Torine — Java at heart. Curious by nature. Backend systems, AI agents, photography, video editing, and design.', mobile)
 mobile_stack = text(28, 40, '02 / MY TOOLBOX', 13, '#c4b5fd', 700, True)
 items=[('Java','#ffbe7b'),('Kotlin','#c6a0ff'),('Python','#ffe28a'),('Rust','#f7a58c'),('Maven','#ff8fac'),('MySQL','#7dcfff'),('Redis','#ff8797'),('Docker','#70c5ff'),('Git','#ffa38a'),('Arduino','#69e0d1')]
 for i, (label, color) in enumerate(items):
