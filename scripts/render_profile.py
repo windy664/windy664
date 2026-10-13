@@ -2,8 +2,39 @@
 from html import escape
 from pathlib import Path
 import re
+import colorsys
 OUT = Path(__file__).resolve().parents[1] / 'assets'
 OUT.mkdir(exist_ok=True)
+
+
+def light_artwork(artwork):
+    """Use ink-colored accents on pearl surfaces, including animation keyframes."""
+    neutrals = {
+        '#0c1020': '#f8f9ff', '#2a304b': '#d8ddeb',
+        '#eef2ff': '#202840', '#f0f2ff': '#202840',
+        '#aab4d0': '#485571', '#aeb9d7': '#485571',
+        '#b4bfdc': '#485571', '#8995b8': '#586580', '#8a96b6': '#586580',
+    }
+    def ink(match):
+        color = match[0].lower()
+        if color in neutrals:
+            return neutrals[color]
+        rgb = tuple(int(color[i:i+2], 16)/255 for i in (1, 3, 5))
+        hue, _, saturation = colorsys.rgb_to_hls(*rgb)
+        lightness = .33
+        rgb = colorsys.hls_to_rgb(hue, lightness, min(saturation, .75))
+        # Cyan/yellow need darker ink than purple to remain readable on white.
+        def luminance(channels):
+            linear = [c/12.92 if c <= .04045 else ((c+.055)/1.055)**2.4 for c in channels]
+            return sum(c*weight for c, weight in zip(linear, (.2126, .7152, .0722)))
+        while luminance(rgb) > .12:
+            lightness -= .01
+            rgb = colorsys.hls_to_rgb(hue, lightness, min(saturation, .75))
+        return '#' + ''.join(f'{round(channel*255):02x}' for channel in rgb)
+    artwork = re.sub(r'#[0-9a-fA-F]{6}\b', ink, artwork)
+    artwork = artwork.replace('stop-opacity=".36"', 'stop-opacity=".12"')
+    artwork = artwork.replace('stop-opacity=".2"', 'stop-opacity=".08"')
+    return artwork
 def text(x,y,value,size=16,color='#aab4d0',weight=400,mono=False,extra=''):
     font='Consolas,monospace' if mono else 'Inter,Segoe UI,Arial,sans-serif'
     return f'<text x="{x}" y="{y}" font-family="{font}" font-size="{size}" fill="{color}" font-weight="{weight}" {extra}>{escape(value)}</text>'
@@ -64,7 +95,9 @@ def motion(name, w, h, body):
 def svg(name,w,h,title,body):
     body = motion(name, w, h, body)
     defs='''<defs><linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5ee7f7"/><stop offset=".36" stop-color="#9c83ff"/><stop offset=".7" stop-color="#fb77b6"/><stop offset="1" stop-color="#ffc778"/></linearGradient><radialGradient id="violet"><stop stop-color="#7951e8" stop-opacity=".36"/><stop offset="1" stop-color="#7951e8" stop-opacity="0"/></radialGradient><radialGradient id="cyan"><stop stop-color="#27cecb" stop-opacity=".2"/><stop offset="1" stop-color="#27cecb" stop-opacity="0"/></radialGradient><pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#929acb" stroke-opacity=".07"/></pattern></defs>'''
-    (OUT/name).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title"><title id="title">{escape(title)}</title>{defs}<defs><clipPath id="panel"><rect width="{w}" height="{h}" rx="24"/></clipPath></defs><g clip-path="url(#panel)"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="24" fill="#0c1020" stroke="#2a304b"/>{body}</g></svg>\n')
+    artwork = f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title"><title id="title">{escape(title)}</title>{defs}<defs><clipPath id="panel"><rect width="{w}" height="{h}" rx="24"/></clipPath></defs><g clip-path="url(#panel)"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="24" fill="#0c1020" stroke="#2a304b"/>{body}</g></svg>\n'
+    (OUT/name).write_text(artwork)
+    (OUT/name.replace('.svg', '-light.svg')).write_text(light_artwork(artwork))
 hero='<rect x="1" y="1" width="978" height="398" rx="24" fill="url(#grid)"/><ellipse cx="780" cy="130" rx="320" ry="270" fill="url(#violet)"/><ellipse cx="160" cy="380" rx="300" ry="220" fill="url(#cyan)"/>'
 hero+=text(44,47,'T / TORINE',15,'#eef2ff',700,True)
 hero+='<circle cx="749" cy="42" r="4" fill="#77efd0"/>'+text(762,47,'ALWAYS EXPLORING',12,'#77efd0',mono=True)
