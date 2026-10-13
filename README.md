@@ -26,8 +26,6 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="./assets/torine-about-mobile.svg" />
-    <source media="(max-width: 600px)" srcset="./assets/torine-about-mobile-light.svg" />
     <source media="(prefers-color-scheme: dark)" srcset="./assets/torine-about.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/torine-about-light.svg" />
     <img src="./assets/torine-about-light.svg" width="100%" alt="I’m Torine. Java at heart. Curious by nature. I build Minecraft plugins, backend systems, and cross-server data sync. I explore AI agents and automation for coding and server operations. Beyond the terminal: photography, video editing, and design." />
@@ -36,8 +34,6 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="./assets/toolbox-mobile.svg" />
-    <source media="(max-width: 600px)" srcset="./assets/toolbox-mobile-light.svg" />
     <source media="(prefers-color-scheme: dark)" srcset="./assets/toolbox.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/toolbox-light.svg" />
     <img src="./assets/toolbox-light.svg" width="100%" alt="My toolbox: Java, Kotlin, Python, Rust, Maven, MySQL, Redis, Docker, Git, and Arduino." />

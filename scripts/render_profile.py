@@ -93,6 +93,20 @@ def motion(name, w, h, body):
 
 
 def svg(name,w,h,title,body):
+    # GitHub rewrites source media conditions for an explicitly selected theme.
+    # Keep viewport layout inside the SVG so it survives that rewrite.
+    if name == 'torine-about.svg':
+        compact = text(40, 46, '01 / ABOUT TORINE', 30, '#c4b5fd', 700, True)
+        compact += text(40, 108, 'Java at heart. Curious by nature.', 44, '#eef2ff', 700)
+        for y, label, color in [
+            (174, 'BUILD / Minecraft & backend systems', '#75e4ed'),
+            (234, 'EXPLORE / AI agents & automation', '#c4a4ff'),
+            (294, 'CREATE / Photography, video & design', '#ff9bc9'),
+        ]:
+            compact += text(40, y, label, 34, color, 600)
+        body = '<style>.compact{display:none}@media(max-width:600px){.wide{display:none}.compact{display:inline}}</style><g class="wide">'+body+'</g><g class="compact">'+compact+'</g>'
+    if name == 'toolbox.svg':
+        body = '<style>@media(max-width:600px){text{font-size:27px}text[text-anchor="end"]{display:none}}</style>'+body
     body = motion(name, w, h, body)
     defs='''<defs><linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5ee7f7"/><stop offset=".36" stop-color="#9c83ff"/><stop offset=".7" stop-color="#fb77b6"/><stop offset="1" stop-color="#ffc778"/></linearGradient><radialGradient id="violet"><stop stop-color="#7951e8" stop-opacity=".36"/><stop offset="1" stop-color="#7951e8" stop-opacity="0"/></radialGradient><radialGradient id="cyan"><stop stop-color="#27cecb" stop-opacity=".2"/><stop offset="1" stop-color="#27cecb" stop-opacity="0"/></radialGradient><pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#929acb" stroke-opacity=".07"/></pattern></defs>'''
     artwork = f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title"><title id="title">{escape(title)}</title>{defs}<defs><clipPath id="panel"><rect width="{w}" height="{h}" rx="24"/></clipPath></defs><g clip-path="url(#panel)"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="24" fill="#0c1020" stroke="#2a304b"/>{body}</g></svg>\n'
