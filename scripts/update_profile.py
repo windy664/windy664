@@ -67,12 +67,19 @@ def main():
         f'<sub>{date:%m.%d}</sub>&nbsp; <a href="{safe_link(url)}">{text(title)}</a>'
         for date, title, url in posts[:2]
     ) + '\n</p>'
-    projects = '<p>\n' + '<br>\n'.join(
-        f'<a href="{safe_link(repo["html_url"])}"><b>{text(repo["name"])}</b></a>'
-        f' &nbsp; <sub>{text(repo["language"] or "Code")} · '
-        f'★ {repo["stargazers_count"]} · updated {repo["pushed_at"][:10]}</sub>'
+    # Keep cards readable at narrow widths; long metadata stays out of the layout.
+    summaries = {
+        'Ru41': 'Personal automation assistant built with Rust + Codex.',
+        'OctoDining': '面向有限预算的餐饮规划应用，原型开发中。',
+    }
+    projects = '<table width="100%">\n<tr>\n' + '\n'.join(
+        '<td width="50%" valign="top">\n'
+        f'<a href="{safe_link(repo["html_url"])}"><b>{text(repo["name"])}</b> ↗</a><br>\n'
+        f'<sub>{text(summaries.get(repo["name"], repo["description"] or "An open-source project."))}</sub><br><br>\n'
+        f'<sub>{text(repo["language"] or "Code")} &nbsp;·&nbsp; '
+        f'Updated {repo["pushed_at"][5:10]}</sub>\n</td>'
         for repo in repos
-    ) + '\n</p>'
+    ) + '\n</tr>\n</table>'
     readme = (ROOT / "README.md").read_text()
     readme = replace_section(readme, "BLOG", blog)
     readme = replace_section(readme, "PROJECTS", projects)
