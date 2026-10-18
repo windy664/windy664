@@ -1,0 +1,61 @@
+name: Refresh profile
+
+on:
+  schedule:
+    - cron: '23 1 * * *'
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/profile.yml'
+      - 'scripts/update_profile.py'
+      - 'scripts/render_compact.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Update blog, projects, and banner
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/update_profile.py
+      - name: Generate contribution animation
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/contributions.svg?color_snake=#8b5cf6&color_dots=#eeedf5,#d9c9f5,#b694ed,#9064d5,#6840a8
+            assets/contributions-dark.svg?palette=github-dark&color_snake=#c4afff&color_dots=#202336,#393050,#62468a,#9567c9,#c4afff
+      - name: Validate generated images
+        run: |
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          for name in ('compact-header-light.svg', 'compact-header-dark.svg', 'contributions.svg', 'contributions-dark.svg'):
+              path = Path('assets') / name
+              assert path.stat().st_size > 100, name
+              ET.parse(path)
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md assets/compact-header-*.svg assets/profile-data.json assets/contributions*.svg
+          if git diff --cached --quiet; then
+            echo 'Profile is already up to date.'
+            exit 0
+          fi
+          git commit -m 'chore: refresh profile content and contribution animation'
+          git pull --rebase origin master
+          git push origin HEAD:master

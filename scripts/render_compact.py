@@ -1,7 +1,13 @@
 """Generate the compact profile banner (no external assets or dependencies)."""
 from pathlib import Path
+from html import escape
+import json
 
 OUT = Path(__file__).resolve().parents[1] / "assets"
+data_path = OUT / "profile-data.json"
+data = json.loads(data_path.read_text()) if data_path.exists() else {}
+project = data.get("current_project")
+eyebrow = "BUILDING / " + project[:30] if project else "DEVELOPER / CREATOR"
 
 for theme, bg, ink, muted, border, accent in [
     ("dark", "#101321", "#f0efff", "#a9adc6", "#30334c", "#c4afff"),
@@ -20,7 +26,7 @@ for theme, bg, ink, muted, border, accent in [
     <ellipse cx="702" cy="82" rx="230" ry="150" fill="url(#glow)"/>
     <path d="M32 1H808" stroke="url(#accent)" stroke-width="2"/>
     <g font-family="Segoe UI,Arial,sans-serif">
-      <text x="32" y="35" fill="{accent}" font-size="10" letter-spacing="3">DEVELOPER / CREATOR</text>
+      <text x="32" y="35" fill="{accent}" font-size="10" letter-spacing="2">{escape(eyebrow)}</text>
       <text x="30" y="82" fill="{ink}" font-size="38" font-weight="700">Hi, I'm Torine<tspan fill="{accent}">.</tspan></text>
       <text x="32" y="111" fill="{muted}" font-size="14">Java / JVM · Minecraft · AI agents</text>
       <text x="32" y="140" fill="{muted}" font-size="12">Code with logic. Create with color.</text>

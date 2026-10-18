@@ -11,7 +11,7 @@
     <ellipse cx="702" cy="82" rx="230" ry="150" fill="url(#glow)"/>
     <path d="M32 1H808" stroke="url(#accent)" stroke-width="2"/>
     <g font-family="Segoe UI,Arial,sans-serif">
-      <text x="32" y="35" fill="#c4afff" font-size="10" letter-spacing="3">DEVELOPER / CREATOR</text>
+      <text x="32" y="35" fill="#c4afff" font-size="10" letter-spacing="2">BUILDING / Ru41</text>
       <text x="30" y="82" fill="#f0efff" font-size="38" font-weight="700">Hi, I'm Torine<tspan fill="#c4afff">.</tspan></text>
       <text x="32" y="111" fill="#a9adc6" font-size="14">Java / JVM · Minecraft · AI agents</text>
       <text x="32" y="140" fill="#a9adc6" font-size="12">Code with logic. Create with color.</text>
