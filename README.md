@@ -13,5 +13,11 @@
 I build Minecraft plugins, backend systems, and cross-server data sync.<br>
 Exploring AI agents & automation. Off-screen: photography, video editing & design.
 
-**Languages** &nbsp; `Java` `Kotlin` `Python` `Rust`<br>
-**Toolbox** &nbsp;&nbsp;&nbsp; `Maven` `MySQL` `Redis` `Docker` `Git` `Arduino`
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,kotlin,python,rust&amp;theme=dark" />
+  <img src="https://skillicons.dev/icons?i=java,kotlin,python,rust&amp;theme=light" height="36" alt="Languages: Java, Kotlin, Python, Rust" />
+</picture><br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=maven,mysql,redis,docker,git,arduino&amp;theme=dark" />
+  <img src="https://skillicons.dev/icons?i=maven,mysql,redis,docker,git,arduino&amp;theme=light" height="36" alt="Toolbox: Maven, MySQL, Redis, Docker, Git, Arduino" />
+</picture>
