@@ -1,13 +1,17 @@
-## Hi, I'm Torine 👋
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/compact-header-dark.svg" />
+  <img src="./assets/compact-header-light.svg" width="100%" alt="Hi, I'm Torine. Java / JVM · Minecraft · AI agents. Code with logic. Create with color." />
+</picture>
 
-Java / JVM · Minecraft · AI agents<br>
-*Code with logic. Create with color.*
+<p align="center">
+  <a href="https://windy664.github.io/"><b>Blog ↗</b></a>&nbsp;&nbsp; · &nbsp;&nbsp;
+  <a href="https://github.com/windy664?tab=repositories">Repositories</a>&nbsp;&nbsp; · &nbsp;&nbsp;
+  <a href="https://github.com/windy664?tab=stars">Inspiration</a>
+</p>
 
-[Blog ↗](https://windy664.github.io/) · [Repositories](https://github.com/windy664?tab=repositories) · [Stars](https://github.com/windy664?tab=stars)
+**Java at heart. Curious by nature.**<br>
+I build Minecraft plugins, backend systems, and cross-server data sync.<br>
+Exploring AI agents & automation. Off-screen: photography, video editing & design.
 
-- **Build** — Minecraft plugins, backend systems, and cross-server data sync.
-- **Explore** — AI agents and automation for coding and server operations.
-- **Create** — Photography, video editing, and design beyond the terminal.
-
-**Languages** · Java · Kotlin · Python · Rust<br>
-**Tools** · Maven · MySQL · Redis · Docker · Git · Arduino
+**Languages** &nbsp; `Java` `Kotlin` `Python` `Rust`<br>
+**Toolbox** &nbsp;&nbsp;&nbsp; `Maven` `MySQL` `Redis` `Docker` `Git` `Arduino`
