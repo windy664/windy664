@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/compact-header-dark.svg" />
-  <img src="./assets/compact-header-light.svg" width="100%" alt="Hi, I'm Torine. Java / JVM · Minecraft · AI agents. Code with logic. Create with color." />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/compact-header-dark.svg" />
+  <img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/compact-header-light.svg" width="840" alt="Hi, I'm Torine. Java / JVM · Minecraft · AI agents. Code with logic. Create with color." />
 </picture>
 
 <p align="center">
