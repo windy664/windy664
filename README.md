@@ -9,17 +9,19 @@
   <a href="https://github.com/windy664?tab=stars">Inspiration</a>
 </p>
 
-**Java at heart. Curious by nature.**<br>
+<p>
+<b>Java at heart. Curious by nature.</b><br>
 I build Minecraft plugins, backend systems, and cross-server data sync.<br>
-Exploring AI agents & automation. Off-screen: photography, video editing & design.
+Exploring AI agents &amp; automation. Off-screen: photography, video editing &amp; design.
+</p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,kotlin,python,rust&amp;theme=dark" />
-  <img src="https://skillicons.dev/icons?i=java,kotlin,python,rust&amp;theme=light" height="36" alt="Languages: Java, Kotlin, Python, Rust" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java%2Ckotlin%2Cpython%2Crust&amp;theme=dark" />
+  <img src="https://skillicons.dev/icons?i=java%2Ckotlin%2Cpython%2Crust&amp;theme=light" height="36" alt="Languages: Java, Kotlin, Python, Rust" />
 </picture><br>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=maven,mysql,redis,docker,git,arduino&amp;theme=dark" />
-  <img src="https://skillicons.dev/icons?i=maven,mysql,redis,docker,git,arduino&amp;theme=light" height="36" alt="Toolbox: Maven, MySQL, Redis, Docker, Git, Arduino" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=maven%2Cmysql%2Credis%2Cdocker%2Cgit%2Carduino&amp;theme=dark" />
+  <img src="https://skillicons.dev/icons?i=maven%2Cmysql%2Credis%2Cdocker%2Cgit%2Carduino&amp;theme=light" height="36" alt="Toolbox: Maven, MySQL, Redis, Docker, Git, Arduino" />
 </picture>
 
 #### ✦ Latest writing
