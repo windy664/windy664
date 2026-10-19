@@ -1,96 +1,67 @@
-"""Generate animated, self-contained SVG artwork for the GitHub profile."""
+"""A small pixel masthead and 88x31 buttons for Torine's personal homepage."""
 from pathlib import Path
 from html import escape
-import json
-import textwrap
 
 OUT = Path(__file__).resolve().parents[1] / 'assets'
-data = json.loads((OUT / 'profile-data.json').read_text())
-PALETTES = {
-    'light': {'bg': '#f7f9ff', 'ink': '#17213e', 'muted': '#52617c', 'line': '#dce2ef', 'purple': '#7251bf', 'teal': '#087f83', 'pink': '#bd427a', 'orange': '#a95921'},
-    'dark': {'bg': '#10182b', 'ink': '#f1f4ff', 'muted': '#b3c1da', 'line': '#2b3956', 'purple': '#b79aff', 'teal': '#67e3db', 'pink': '#ff9aca', 'orange': '#ffc28c'},
+LETTERS = {
+    'T': ['11111','00100','00100','00100','00100','00100','00100'],
+    'O': ['01110','10001','10001','10001','10001','10001','01110'],
+    'R': ['11110','10001','10001','11110','10100','10010','10001'],
+    'I': ['11111','00100','00100','00100','00100','00100','11111'],
+    'N': ['10001','11001','11001','10101','10011','10011','10001'],
+    'E': ['11111','10000','10000','11110','10000','10000','11111'],
 }
-MOTION = '''<style>
-@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(-24px,12px)}}
-@keyframes rise{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-@keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
-@keyframes flow{to{stroke-dashoffset:-360}}
-@keyframes hue{0%,100%{stop-color:#a88bff}50%{stop-color:#ff86be}}
-.drift{animation:drift 10s ease-in-out infinite}.rise{animation:rise 6s ease-in-out infinite}
-.pulse{animation:breathe 3s ease-in-out infinite}.flow{animation:flow 16s linear infinite}
-.color{animation:hue 9s ease-in-out infinite}
+COLORS = ['#89d9ff', '#ffc28b', '#b4eba1', '#e1b0ff', '#ff9ead', '#ffdf82']
+
+
+def svg(name, width, height, title, body):
+    (OUT / name).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title"><title id="title">{escape(title)}</title>{body}</svg>\n')
+
+
+body = '''<style>
+@keyframes twinkle{0%,70%,100%{opacity:.35}75%,95%{opacity:1}}
+@keyframes cursor{0%,45%{opacity:1}46%,100%{opacity:0}}
+.star{animation:twinkle 5s steps(1,end) infinite}.cursor{animation:cursor 1.4s steps(1,end) infinite}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
-</style>'''
-
-
-def text(x, y, value, size, color, weight=400, extra=''):
-    return f'<text x="{x}" y="{y}" font-family="Segoe UI,Arial,sans-serif" font-size="{size}" font-weight="{weight}" fill="{color}" {extra}>{escape(value)}</text>'
-
-
-def save(name, theme, width, height, title, body):
-    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title"><title id="title">{escape(title)}</title>{MOTION}{body}</svg>\n'
-    (OUT / f'{name}-{theme}.svg').write_text(svg)
-
-
-def header(theme, p):
-    project = data.get('current_project', 'something new')[:28]
-    body = f'''<defs>
-<linearGradient id="spectrum"><stop stop-color="#42cec8"/><stop offset=".48" stop-color="#a88bff" class="color"/><stop offset="1" stop-color="#ff86be"/></linearGradient>
-<radialGradient id="violet"><stop stop-color="#9a6bff" stop-opacity=".3"/><stop offset="1" stop-color="#9a6bff" stop-opacity="0"/></radialGradient>
-<radialGradient id="mint"><stop stop-color="#35d8c4" stop-opacity=".22"/><stop offset="1" stop-color="#35d8c4" stop-opacity="0"/></radialGradient>
-<clipPath id="panel"><rect x=".5" y=".5" width="839" height="203" rx="18"/></clipPath>
-</defs>
-<style>@media(max-width:500px){{.eyebrow,.status,.fine-print{{display:none}}.name{{font-size:96px}}.tagline{{font-size:24px}}.art{{opacity:.6}}}}</style>
-<g clip-path="url(#panel)">
-<rect x=".5" y=".5" width="839" height="203" rx="18" fill="{p['bg']}" stroke="{p['line']}"/>
-<g class="drift"><ellipse cx="680" cy="48" rx="290" ry="220" fill="url(#violet)"/><ellipse cx="70" cy="204" rx="280" ry="180" fill="url(#mint)"/></g>
-<path d="M28 1H812" stroke="url(#spectrum)" stroke-width="3"/>
+@media(max-width:500px){.small{display:none}.wordmark{transform:translate(28px,48px) scale(1.2)}.caption{font-size:23px}}
+</style>
+<rect width="840" height="170" fill="#151c32"/>
+<path d="M1 169V1H839" fill="none" stroke="#60739a" stroke-width="2"/>
+<path d="M839 1V169H1" fill="none" stroke="#080e1d" stroke-width="2"/>
 '''
-    body += text(28, 30, 'DEVELOPER / CREATOR / CURIOUS HUMAN', 10, p['muted'], 600, 'class="eyebrow" letter-spacing="1.8"')
-    body += text(25, 112, 'Torine.', 82, p['ink'], 700, 'class="name" letter-spacing="-4"')
-    body += text(30, 145, 'Code with logic. Create with color.', 18, p['muted'], 400, 'class="tagline"')
-    body += f'<g class="status"><circle cx="34" cy="179" r="3.5" fill="{p["teal"]}" class="pulse"/>'
-    body += text(46, 183, f'BUILDING / {project}', 11, p['teal'], 600) + '</g>'
-    # The line grid and floating glass tiles echo code, pixels and creative tools.
-    body += f'''<g class="art" transform="translate(664 104)">
-<path d="M-145 42 0 106 145 42 0-22Z M-105 60 40-4 M-60 80 85 16 M-40-4 105 60 M-85 16 60 80" fill="none" stroke="{p['purple']}" stroke-opacity=".16"/>
-<g class="rise"><path d="m-74 8 74-40 74 40-74 40Z" fill="{p['teal']}" fill-opacity=".12" stroke="{p['teal']}" stroke-opacity=".45"/></g>
-<g class="rise" style="animation-delay:-2s"><path d="m-74-18 74-40 74 40-74 40Z" fill="{p['purple']}" fill-opacity=".12" stroke="{p['purple']}" stroke-opacity=".65"/>
-<path d="m-26-22-13 7 13 7m52-14 13 7-13 7m-17-20-18 26" fill="none" stroke="{p['purple']}" stroke-width="2.4" stroke-linecap="round"/></g>
-<g class="rise" style="animation-delay:-4s"><rect x="91" y="-40" width="22" height="22" rx="5" fill="{p['pink']}" fill-opacity=".2" stroke="{p['pink']}" stroke-opacity=".6"/><rect x="-118" y="-60" width="12" height="12" rx="3" fill="{p['teal']}" fill-opacity=".6"/></g>
-<circle cx="-102" cy="28" r="3" fill="{p['orange']}" class="pulse"/>
-<path d="M100 53h10m-5-5v10M-118-12h8m-4-4v8" stroke="{p['pink']}" stroke-opacity=".6"/>
-</g>
-<path d="M28 203H812" stroke="url(#spectrum)" stroke-width="1.5" stroke-dasharray="90 270" class="flow"/>
+for index, (x,y) in enumerate([(448,23),(530,67),(796,35),(614,27),(756,139),(467,123),(575,146),(814,104),(392,149),(683,24)]):
+    color = COLORS[index % len(COLORS)]
+    body += f'<path class="star" style="animation-delay:-{index*.6}s" d="M{x-3} {y}h7M{x} {y-3}v7" stroke="{color}" stroke-width="1"/>'
+body += '<text class="small" x="28" y="29" font-family="Courier New,monospace" font-size="12" fill="#b2bfd8">windy664.github.io / personal homepage</text>'
+body += '<g class="wordmark" transform="translate(28 48)">'
+for letter_index, letter in enumerate('TORINE'):
+    for row, pixels in enumerate(LETTERS[letter]):
+        for col, value in enumerate(pixels):
+            if value == '1':
+                body += f'<rect x="{letter_index*54+col*8}" y="{row*8}" width="7" height="7" fill="{COLORS[letter_index]}"/>'
+body += '</g><text class="caption" x="28" y="141" font-family="Courier New,monospace" font-size="16" fill="#dce4f3">Java / Minecraft / Rust</text>'
+# A tiny CRT, drawn with flat pixels; the only moving part is its terminal cursor.
+body += '''<g transform="translate(634 47)" shape-rendering="crispEdges">
+<path d="M8 0h102v4h5v70H4V4h4Z" fill="#bdc6cd"/>
+<path d="M8 4h102v3H8Z" fill="#edf1f2"/>
+<path d="M8 8h98v55H8Z" fill="#566074"/>
+<path d="M12 12h90v47H12Z" fill="#142c2a"/>
+<path d="m21 23 8 6-8 6" fill="none" stroke="#9be0ae" stroke-width="3"/>
+<rect class="cursor" x="39" y="33" width="10" height="3" fill="#9be0ae"/>
+<rect x="93" y="67" width="5" height="3" fill="#8fca75"/>
+<path d="M43 74h34v12H43Z" fill="#909ba6"/>
+<path d="M26 86h68v8H26Z" fill="#c1c9cf"/>
+<path d="M0 102h119l8 12H-9Z" fill="#a1adba"/>
+<path d="M7 105h103M3 109h111" stroke="#59697c" stroke-width="2"/>
 </g>'''
-    save('compact-header', theme, 840, 204, 'Torine — Code with logic. Create with color. Building ' + project, body)
+for theme in ('light','dark'):
+    svg(f'compact-header-{theme}.svg',840,170,'Torine / windy664 — Java, Minecraft and Rust',body)
 
-
-def card(theme, p, kind, index, item):
-    color = p[('teal', 'purple')[index] if kind == 'project' else ('pink', 'orange')[index]]
-    body = f'''<defs><linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="{color}" stop-opacity=".11"/><stop offset="1" stop-color="{color}" stop-opacity=".02"/></linearGradient></defs>
-<rect x=".5" y=".5" width="409" height="117" rx="12" fill="{p['bg']}" stroke="{p['line']}"/>
-<rect x="1" y="1" width="408" height="116" rx="12" fill="url(#wash)"/>
-<path d="M20 1H112" stroke="{color}" stroke-width="2"/>
-'''
-    label = item['language'].upper() + ' / PROJECT' if kind == 'project' else 'FIELD NOTES / ' + item['date_label'].upper()
-    body += text(20, 23, label, 9, color, 700, 'letter-spacing="1.3"')
-    if kind == 'project':
-        name = item['name'] if len(item['name']) < 24 else item['name'][:22] + '…'
-        body += text(18, 58, name, 27, p['ink'], 650)
-        for row, line in enumerate(textwrap.wrap(item['summary'], 48)[:2]):
-            body += text(20, 82 + row * 18, line, 13, p['muted'])
-    else:
-        lines = textwrap.wrap(item['title'], 31)[:2]
-        for row, line in enumerate(lines):
-            body += text(19, 53 + row * 25, line, 20, p['ink'], 600)
-        body += text(20, 102, 'Read the story · Chinese', 11, p['muted'])
-    body += f'<path d="M374 29h12v12m0-12-13 13" fill="none" stroke="{color}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>'
-    save(f'card-{kind}-{index + 1}', theme, 410, 118, item.get('name', item.get('title', '')), body)
-
-
-for theme, palette in PALETTES.items():
-    header(theme, palette)
-    for kind in ('project', 'post'):
-        for i, item in enumerate(data[kind + 's']):
-            card(theme, palette, kind, i, item)
+for name, label, color in [('blog','MY BLOG','#345caf'),('code','MY CODE','#237665'),('rss','RSS FEED','#a95530')]:
+    button = f'''<style>@keyframes nudge{{0%,65%,100%{{transform:translateX(0)}}70%,90%{{transform:translateX(2px)}}}}.arrow{{animation:nudge 4s steps(1,end) infinite}}@media(prefers-reduced-motion:reduce){{*{{animation:none!important}}}}</style>
+<rect width="88" height="31" fill="{color}"/>
+<path d="M1 30V1H87" fill="none" stroke="#dce3ec" stroke-width="2"/>
+<path d="M87 1V30H1" fill="none" stroke="#182433" stroke-width="2"/>
+<text x="7" y="19" fill="#ffffff" font-family="Verdana,Arial,sans-serif" font-size="9" font-weight="700">{label}</text>
+<path class="arrow" d="m74 11 4 4-4 4" fill="none" stroke="#ffffff" stroke-width="2"/>'''
+    svg(f'nav-retro-{name}.svg',88,31,label,button)

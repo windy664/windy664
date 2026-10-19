@@ -5,23 +5,23 @@
       "name": "Ru41",
       "url": "https://github.com/windy664/Ru41",
       "language": "Rust",
-      "summary": "Personal automation, built with Rust."
+      "summary": "A Rust assistant for RSS, papers, and dorm utility bills."
     },
     {
       "name": "OctoDining",
       "url": "https://github.com/windy664/OctoDining",
       "language": "Python",
-      "summary": "Meal planning on a budget. A work in progress."
+      "summary": "Weekly meal plans from a cafeteria menu and a budget."
     }
   ],
   "posts": [
     {
-      "title": "Campus utilities, automated",
+      "title": "Reverse-engineering my campus utility app",
       "url": "https://windy664.github.io/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/",
       "date_label": "Oct 14"
     },
     {
-      "title": "WindyAgent: from framework to application?",
+      "title": "Should WindyAgent become a Minecraft app?",
       "url": "https://windy664.github.io/2026/10/04/windyagent-from-framework-to-application/",
       "date_label": "Oct 04"
     }

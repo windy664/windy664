@@ -64,12 +64,12 @@ def main():
         raise ValueError("Expected at least two public projects")
 
     summaries = {
-        'Ru41': 'Personal automation, built with Rust.',
-        'OctoDining': 'Meal planning on a budget. A work in progress.',
+        'Ru41': 'A Rust assistant for RSS, papers, and dorm utility bills.',
+        'OctoDining': 'Weekly meal plans from a cafeteria menu and a budget.',
     }
     editorial_titles = {
-        '/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/': 'Campus utilities, automated',
-        '/2026/10/04/windyagent-from-framework-to-application/': 'WindyAgent: from framework to application?',
+        '/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/': 'Reverse-engineering my campus utility app',
+        '/2026/10/04/windyagent-from-framework-to-application/': 'Should WindyAgent become a Minecraft app?',
     }
     data = {"current_project": repos[0]['name'], 'projects': [], 'posts': []}
     for repo in repos:
@@ -86,19 +86,13 @@ def main():
             'title': editorial_titles.get(urlparse(url).path, fallback),
             'url': url, 'date_label': date.strftime('%b %d'),
         })
-    journal = []
-    for kind, label in [('project', 'Building'), ('post', 'Writing')]:
-        journal.extend([f'<h4>{label}</h4>', '<p align="center">'])
-        for index, item in enumerate(data[kind + 's'], 1):
-            asset = f'https://raw.githubusercontent.com/{OWNER}/{OWNER}/master/assets/card-{kind}-{index}'
-            alt = item['name'] + ' — ' + item['summary'] if kind == 'project' else item['title'] + ' (article in Chinese)'
-            journal.append(
-                f'<a href="{safe_link(item["url"])}"><picture>'
-                f'<source media="(prefers-color-scheme: dark)" srcset="{asset}-dark.svg" />'
-                f'<img src="{asset}-light.svg" width="410" alt="{text(alt)}" />'
-                '</picture></a>'
-            )
-        journal.append('</p>')
+    journal = ['<h4>Things I’m working on</h4>', '<ul>']
+    for item in data['projects']:
+        journal.append(f'<li><a href="{safe_link(item["url"])}"><b>{text(item["name"])}</b></a> — {text(item["summary"])}</li>')
+    journal.extend(['</ul>', '<h4>From the blog <small>(in Chinese)</small></h4>', '<ul>'])
+    for item in data['posts']:
+        journal.append(f'<li><a href="{safe_link(item["url"])}">{text(item["title"])}</a> <sub>· {text(item["date_label"])}</sub></li>')
+    journal.append('</ul>')
     readme = (ROOT / "README.md").read_text()
     readme = replace_section(readme, "JOURNAL", '\n'.join(journal))
     (ROOT / "assets/profile-data.json").write_text(json.dumps(data, indent=2) + "\n")

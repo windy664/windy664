@@ -46,16 +46,16 @@ jobs:
               path = Path('assets') / name
               assert path.stat().st_size > 100, name
               ET.parse(path)
-          cards = list(Path('assets').glob('card-*.svg'))
-          assert len(cards) == 8
-          for path in cards:
+          buttons = list(Path('assets').glob('nav-retro-*.svg'))
+          assert len(buttons) == 3
+          for path in buttons:
               ET.parse(path)
           PY
       - name: Commit changes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md assets/compact-header-*.svg assets/profile-data.json assets/contributions*.svg assets/card-*.svg
+          git add README.md assets/compact-header-*.svg assets/profile-data.json assets/contributions*.svg assets/nav-retro-*.svg
           if git diff --cached --quiet; then
             echo 'Profile is already up to date.'
             exit 0
