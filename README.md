@@ -1,12 +1,9 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/compact-header-dark.svg" />
-  <img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/compact-header-light.svg" width="840" alt="Torine / windy664 — Java, Minecraft and Rust" />
-</picture>
+## Torine
 
 <p>
-<a href="https://windy664.github.io/"><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/nav-retro-blog.svg" width="88" height="31" alt="My blog" /></a>
-<a href="https://github.com/windy664?tab=repositories"><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/nav-retro-code.svg" width="88" height="31" alt="My code" /></a>
-<a href="https://windy664.github.io/rss.xml"><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/nav-retro-rss.svg" width="88" height="31" alt="RSS feed" /></a>
+<a href="https://windy664.github.io/">Blog</a> ·
+<a href="https://github.com/windy664?tab=repositories">Code</a> ·
+<a href="https://windy664.github.io/rss.xml">RSS</a>
 </p>
 
 <p>
