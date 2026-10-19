@@ -1,3 +1,29 @@
 {
-  "current_project": "Ru41"
+  "current_project": "Ru41",
+  "projects": [
+    {
+      "name": "Ru41",
+      "url": "https://github.com/windy664/Ru41",
+      "language": "Rust",
+      "summary": "Personal automation, built with Rust."
+    },
+    {
+      "name": "OctoDining",
+      "url": "https://github.com/windy664/OctoDining",
+      "language": "Python",
+      "summary": "Meal planning on a budget. A work in progress."
+    }
+  ],
+  "posts": [
+    {
+      "title": "Campus utilities, automated",
+      "url": "https://windy664.github.io/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/",
+      "date_label": "Oct 14"
+    },
+    {
+      "title": "WindyAgent: from framework to application?",
+      "url": "https://windy664.github.io/2026/10/04/windyagent-from-framework-to-application/",
+      "date_label": "Oct 04"
+    }
+  ]
 }

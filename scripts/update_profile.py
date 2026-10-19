@@ -68,34 +68,39 @@ def main():
         'OctoDining': 'Meal planning on a budget. A work in progress.',
     }
     editorial_titles = {
-        '/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/': 'Reverse-engineering campus utilities for my assistant',
-        '/2026/10/04/windyagent-from-framework-to-application/': 'WindyAgent: from framework to Minecraft agent?',
+        '/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/': 'Campus utilities, automated',
+        '/2026/10/04/windyagent-from-framework-to-application/': 'WindyAgent: from framework to application?',
     }
-    # Native text flows on small screens, without GitHub's table borders or stripes.
-    journal = ['<h4>01 &nbsp; / &nbsp; Building</h4>', '<p>']
-    for index, repo in enumerate(repos):
+    data = {"current_project": repos[0]['name'], 'projects': [], 'posts': []}
+    for repo in repos:
         description = repo['description'] or ''
         fallback = description if description.isascii() else ''
         summary = summaries.get(repo['name'], fallback or 'An open-source project.')
-        summary = summary if len(summary) <= 80 else summary[:77].rstrip() + '…'
-        journal.extend([
-            f'<a href="{safe_link(repo["html_url"])}"><b>{text(repo["name"])}</b></a>',
-            f' &nbsp;—&nbsp; {text(summary)}' + ('<br>' if index == 0 else ''),
-        ])
-    journal.extend(['</p>', '<h4>02 &nbsp; / &nbsp; Writing <sub>· in Chinese</sub></h4>', '<p>'])
-    for index, (date, title, url) in enumerate(posts[:2]):
-        # New untranslated posts keep an English date label until a title is curated.
+        data['projects'].append({
+            'name': repo['name'], 'url': repo['html_url'],
+            'language': repo['language'] or 'Code', 'summary': summary,
+        })
+    for date, title, url in posts[:2]:
         fallback = title if title.isascii() else f'Field notes — {date:%B %d, %Y}'
-        display_title = editorial_titles.get(urlparse(url).path, fallback)
-        journal.append(
-            f'<sub>{date:%b %d}</sub> &nbsp; '
-            f'<a href="{safe_link(url)}">{text(display_title)}</a>'
-            + ('<br>' if index == 0 else '')
-        )
-    journal.append('</p>')
+        data['posts'].append({
+            'title': editorial_titles.get(urlparse(url).path, fallback),
+            'url': url, 'date_label': date.strftime('%b %d'),
+        })
+    journal = []
+    for kind, label in [('project', 'Building'), ('post', 'Writing')]:
+        journal.extend([f'<h4>{label}</h4>', '<p align="center">'])
+        for index, item in enumerate(data[kind + 's'], 1):
+            asset = f'https://raw.githubusercontent.com/{OWNER}/{OWNER}/master/assets/card-{kind}-{index}'
+            alt = item['name'] + ' — ' + item['summary'] if kind == 'project' else item['title'] + ' (article in Chinese)'
+            journal.append(
+                f'<a href="{safe_link(item["url"])}"><picture>'
+                f'<source media="(prefers-color-scheme: dark)" srcset="{asset}-dark.svg" />'
+                f'<img src="{asset}-light.svg" width="410" alt="{text(alt)}" />'
+                '</picture></a>'
+            )
+        journal.append('</p>')
     readme = (ROOT / "README.md").read_text()
     readme = replace_section(readme, "JOURNAL", '\n'.join(journal))
-    data = {"current_project": repos[0]["name"]}
     (ROOT / "assets/profile-data.json").write_text(json.dumps(data, indent=2) + "\n")
     runpy.run_path(str(ROOT / "scripts/render_compact.py"))
     (ROOT / "README.md").write_text(readme)

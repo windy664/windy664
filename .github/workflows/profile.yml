@@ -35,8 +35,8 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/contributions.svg?color_snake=#b24c32&color_dots=#f0ede8,#e7cec1,#d6a18a,#be765a,#9d4b34
-            assets/contributions-dark.svg?palette=github-dark&color_snake=#ec9d7e&color_dots=#262725,#49352d,#704737,#a46950,#d6997d
+            assets/contributions.svg?color_snake=#7251bf&color_dots=#eef0fa,#a9e3dd,#87bbdf,#a18add,#d680b5
+            assets/contributions-dark.svg?palette=github-dark&color_snake=#ff9aca&color_dots=#202b40,#276e75,#4472a1,#8569be,#c777a9
       - name: Validate generated images
         run: |
           python3 - <<'PY'
@@ -46,12 +46,16 @@ jobs:
               path = Path('assets') / name
               assert path.stat().st_size > 100, name
               ET.parse(path)
+          cards = list(Path('assets').glob('card-*.svg'))
+          assert len(cards) == 8
+          for path in cards:
+              ET.parse(path)
           PY
       - name: Commit changes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md assets/compact-header-*.svg assets/profile-data.json assets/contributions*.svg
+          git add README.md assets/compact-header-*.svg assets/profile-data.json assets/contributions*.svg assets/card-*.svg
           if git diff --cached --quiet; then
             echo 'Profile is already up to date.'
             exit 0

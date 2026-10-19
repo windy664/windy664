@@ -1,23 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="186" viewBox="0 0 840 186" role="img" aria-labelledby="title desc">
-<title id="title">Torine — a personal index of code and curiosity.</title>
-<desc id="desc">Java / JVM, Minecraft and AI agents. Currently building Ru41.</desc>
-<style>@media(max-width:500px){.small-print{display:none}.name{font-size:140px}.quote{font-size:28px}}</style>
-<g font-family="Arial,Helvetica,sans-serif">
-  <path d="M0 1H840" stroke="#22211f" stroke-width="2"/>
-  <text class="small-print" x="0" y="25" fill="#74716c" font-size="11" letter-spacing="2.2">CODE / SYSTEMS / CURIOSITY</text>
-  <text class="small-print" x="840" y="25" text-anchor="end" fill="#b24c32" font-size="11" letter-spacing="1.5">THE PERSONAL INDEX</text>
-  <text class="name" x="-4" y="130" fill="#22211f" font-family="Georgia,Times New Roman,serif" font-size="112" letter-spacing="-5">Torine<tspan fill="#b24c32">.</tspan></text>
-  <path d="M548 58V135" stroke="#dedbd6"/>
-  <text class="quote" x="574" y="78" fill="#22211f" font-family="Georgia,Times New Roman,serif" font-size="22" font-style="italic">Java at heart.</text>
-  <text class="quote" x="574" y="108" fill="#22211f" font-family="Georgia,Times New Roman,serif" font-size="22" font-style="italic">Curious by nature.</text>
-  <text class="small-print" x="574" y="134" fill="#74716c" font-size="11">NOW / Ru41</text>
-  <g class="small-print">
-  <text x="0" y="169" fill="#74716c" font-size="12" letter-spacing="1">JAVA / JVM</text>
-  <text x="137" y="169" fill="#b24c32" font-size="12">/</text>
-  <text x="161" y="169" fill="#74716c" font-size="12" letter-spacing="1">MINECRAFT</text>
-  <text x="288" y="169" fill="#b24c32" font-size="12">/</text>
-  <text x="312" y="169" fill="#74716c" font-size="12" letter-spacing="1">AI AGENTS</text>
-  </g>
-  <path d="M0 185H840" stroke="#dedbd6"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="204" viewBox="0 0 840 204" role="img" aria-labelledby="title"><title id="title">Torine — Code with logic. Create with color. Building Ru41</title><style>
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(-24px,12px)}}
+@keyframes rise{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes flow{to{stroke-dashoffset:-360}}
+@keyframes hue{0%,100%{stop-color:#a88bff}50%{stop-color:#ff86be}}
+.drift{animation:drift 10s ease-in-out infinite}.rise{animation:rise 6s ease-in-out infinite}
+.pulse{animation:breathe 3s ease-in-out infinite}.flow{animation:flow 16s linear infinite}
+.color{animation:hue 9s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><defs>
+<linearGradient id="spectrum"><stop stop-color="#42cec8"/><stop offset=".48" stop-color="#a88bff" class="color"/><stop offset="1" stop-color="#ff86be"/></linearGradient>
+<radialGradient id="violet"><stop stop-color="#9a6bff" stop-opacity=".3"/><stop offset="1" stop-color="#9a6bff" stop-opacity="0"/></radialGradient>
+<radialGradient id="mint"><stop stop-color="#35d8c4" stop-opacity=".22"/><stop offset="1" stop-color="#35d8c4" stop-opacity="0"/></radialGradient>
+<clipPath id="panel"><rect x=".5" y=".5" width="839" height="203" rx="18"/></clipPath>
+</defs>
+<style>@media(max-width:500px){.eyebrow,.status,.fine-print{display:none}.name{font-size:96px}.tagline{font-size:24px}.art{opacity:.6}}</style>
+<g clip-path="url(#panel)">
+<rect x=".5" y=".5" width="839" height="203" rx="18" fill="#f7f9ff" stroke="#dce2ef"/>
+<g class="drift"><ellipse cx="680" cy="48" rx="290" ry="220" fill="url(#violet)"/><ellipse cx="70" cy="204" rx="280" ry="180" fill="url(#mint)"/></g>
+<path d="M28 1H812" stroke="url(#spectrum)" stroke-width="3"/>
+<text x="28" y="30" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600" fill="#52617c" class="eyebrow" letter-spacing="1.8">DEVELOPER / CREATOR / CURIOUS HUMAN</text><text x="25" y="112" font-family="Segoe UI,Arial,sans-serif" font-size="82" font-weight="700" fill="#17213e" class="name" letter-spacing="-4">Torine.</text><text x="30" y="145" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#52617c" class="tagline">Code with logic. Create with color.</text><g class="status"><circle cx="34" cy="179" r="3.5" fill="#087f83" class="pulse"/><text x="46" y="183" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#087f83" >BUILDING / Ru41</text></g><g class="art" transform="translate(664 104)">
+<path d="M-145 42 0 106 145 42 0-22Z M-105 60 40-4 M-60 80 85 16 M-40-4 105 60 M-85 16 60 80" fill="none" stroke="#7251bf" stroke-opacity=".16"/>
+<g class="rise"><path d="m-74 8 74-40 74 40-74 40Z" fill="#087f83" fill-opacity=".12" stroke="#087f83" stroke-opacity=".45"/></g>
+<g class="rise" style="animation-delay:-2s"><path d="m-74-18 74-40 74 40-74 40Z" fill="#7251bf" fill-opacity=".12" stroke="#7251bf" stroke-opacity=".65"/>
+<path d="m-26-22-13 7 13 7m52-14 13 7-13 7m-17-20-18 26" fill="none" stroke="#7251bf" stroke-width="2.4" stroke-linecap="round"/></g>
+<g class="rise" style="animation-delay:-4s"><rect x="91" y="-40" width="22" height="22" rx="5" fill="#bd427a" fill-opacity=".2" stroke="#bd427a" stroke-opacity=".6"/><rect x="-118" y="-60" width="12" height="12" rx="3" fill="#087f83" fill-opacity=".6"/></g>
+<circle cx="-102" cy="28" r="3" fill="#a95921" class="pulse"/>
+<path d="M100 53h10m-5-5v10M-118-12h8m-4-4v8" stroke="#bd427a" stroke-opacity=".6"/>
 </g>
-</svg>
+<path d="M28 203H812" stroke="url(#spectrum)" stroke-width="1.5" stroke-dasharray="90 270" class="flow"/>
+</g></svg>
