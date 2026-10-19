@@ -52,12 +52,15 @@ jobs:
                       path = Path('assets') / f'profile-{kind}-{index}-{theme}.svg'
                       assert path.stat().st_size > 100, path
                       ET.parse(path)
+          for link in ('blog', 'code', 'rss'):
+              for theme in ('light', 'dark'):
+                  ET.parse(Path('assets') / f'profile-link-{link}-{theme}.svg')
           PY
       - name: Commit changes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md assets/compact-header-*.svg assets/profile-data.json assets/profile-projects-*.svg assets/profile-posts-*.svg assets/contributions*.svg
+          git add README.md assets/compact-header-*.svg assets/profile-data.json assets/profile-projects-*.svg assets/profile-posts-*.svg assets/profile-link-*.svg assets/contributions*.svg
           if git diff --cached --quiet; then
             echo 'Profile is already up to date.'
             exit 0

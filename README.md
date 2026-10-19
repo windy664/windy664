@@ -1,8 +1,8 @@
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/compact-header-dark.svg"/><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/compact-header-light.svg" width="840" alt="Torine / windy664 — Java, Minecraft, and tools for my own use"/></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/compact-header-dark.svg"/><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/compact-header-light.svg" width="840" alt="Torine / windy664 — Minecraft plugins, small tools, photos and videos"/></picture>
 
-<p><a href="https://windy664.github.io/">Blog</a> &nbsp; / &nbsp; <a href="https://github.com/windy664?tab=repositories">Code</a> &nbsp; / &nbsp; <a href="https://windy664.github.io/rss.xml">RSS</a></p>
-
-<p>I write Minecraft plugins and tools for my own use.<br><sub>Also into photography and video editing.</sub></p>
+<p>
+<a href="https://windy664.github.io/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-link-blog-dark.svg"/><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-link-blog-light.svg" width="88" height="28" alt="Blog"/></picture></a><a href="https://github.com/windy664?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-link-code-dark.svg"/><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-link-code-light.svg" width="92" height="28" alt="Code"/></picture></a><a href="https://windy664.github.io/rss.xml"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-link-rss-dark.svg"/><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-link-rss-light.svg" width="76" height="28" alt="RSS"/></picture></a>
+</p>
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java%2Ckotlin%2Cpython%2Crust%2Cmaven%2Cmysql%2Credis%2Cdocker%2Cgit%2Carduino&amp;theme=dark"/><img src="https://skillicons.dev/icons?i=java%2Ckotlin%2Cpython%2Crust%2Cmaven%2Cmysql%2Credis%2Cdocker%2Cgit%2Carduino&amp;theme=light" width="300" alt="Java, Kotlin, Python, Rust, Maven, MySQL, Redis, Docker, Git, Arduino"/></picture></p>
 

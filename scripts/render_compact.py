@@ -47,11 +47,21 @@ for theme in ('light', 'dark'):
 </style>'''
     header += text(28, 31, 'TORINE / WINDY664', 11, blue, 600, extra='class="small" letter-spacing="2"')
     header += text(24, 119, 'Torine', 88, ink, 400, 'Georgia,Times New Roman,serif', 'class="name"')
-    header += text(29, 158, 'Java, Minecraft & things I make for myself.', 17, muted, extra='class="caption"')
+    header += text(29, 158, 'Minecraft plugins, small tools, photos & videos.', 17, muted, extra='class="caption"')
     current = ' + '.join(textwrap.shorten(item['name'], width=22, placeholder='…') for item in DATA['projects'])
     header += text(29, 190, 'Currently: ' + current, 11, blue, extra='class="small"')
     header += f'<g transform="translate(473 51)"><g class="breeze"><path d="M0 3q9-9 18 0 9-9 18 0" fill="none" stroke="{blue}" stroke-width="1.8" stroke-linecap="round"/></g></g>'
     save(f'compact-header-{theme}.svg', 840, 210, 'Torine / windy664 — ' + current, header)
+
+    links = {
+        'blog': ('Blog', 88, '<path d="M5 3h12a2 2 0 0 1 2 2v16H6a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Zm-2 15a3 3 0 0 1 3-3h13M7 7h8M7 10h6"/>'),
+        'code': ('Code', 92, '<path d="m7 6-6 6 6 6m10-12 6 6-6 6M14 3l-4 18"/>'),
+        'rss': ('RSS', 76, '<circle cx="4" cy="20" r="1"/><path d="M3 11a10 10 0 0 1 10 10M3 3a18 18 0 0 1 18 18"/>'),
+    }
+    for key, (label, width, icon) in links.items():
+        body = f'<g transform="translate(1 6) scale(.67)" fill="none" stroke="{blue}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{icon}</g>'
+        body += text(25, 19, label, 14, ink)
+        save(f'profile-link-{key}-{theme}.svg', width, 28, label, body)
 
     for kind in ('projects', 'posts'):
         for index, item in enumerate(DATA[kind]):
