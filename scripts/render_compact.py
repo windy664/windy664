@@ -1,17 +1,11 @@
-"""Render the blue-and-white profile chosen from preview A.
-
-The avatar is stored locally so every SVG is self-contained and reproducible.
-Original avatar: https://avatars.githubusercontent.com/u/81475218?v=4
-"""
+"""Render the blue-and-white profile with a quiet sky illustration."""
 from pathlib import Path
 from html import escape
-import base64
 import json
 import textwrap
 
 OUT = Path(__file__).resolve().parents[1] / 'assets'
 DATA = json.loads((OUT / 'profile-data.json').read_text())
-AVATAR = 'data:image/png;base64,' + base64.b64encode((OUT / 'torine-avatar.png').read_bytes()).decode()
 
 
 def text(x, y, value, size, color, weight=400, family='Arial,Helvetica,sans-serif', extra=''):
@@ -29,10 +23,22 @@ for theme in ('light', 'dark'):
     muted = '#b1c5d2' if dark else '#5a7483'
     blue = '#86c8e9' if dark else '#287fa9'
     background = '#132635' if dark else '#eef7fc'
-    header = f'''<defs><clipPath id="photo"><path d="M605 0H840V210H550Z"/></clipPath></defs>
+    sky = '#1b3849' if dark else '#deeff8'
+    cloud = '#294b5d' if dark else '#f5fbff'
+    header = f'''<defs><clipPath id="sky"><path d="M605 0H840V210H550Z"/></clipPath></defs>
 <rect width="840" height="210" fill="{background}"/>
-<image href="{AVATAR}" x="544" y="-28" width="296" height="296" clip-path="url(#photo)"/>
-<path d="M548 210 603 0" stroke="{blue}" stroke-opacity=".25" stroke-width="2"/>
+<g clip-path="url(#sky)">
+<rect x="550" width="290" height="210" fill="{sky}"/>
+<path d="M642 76c2-12 15-18 26-13 2-21 32-29 44-10 14-8 30 1 30 14 13-3 23 1 27 9Z" fill="{cloud}"/>
+<path d="M758 34c3-13 18-18 29-11 2-18 25-24 36-11 11-6 23-1 26 10l12 12Z" fill="{cloud}" opacity=".65"/>
+<g fill="none" stroke="{blue}" stroke-linecap="round">
+<path d="M566 175C657 126 714 206 852 137" stroke-opacity=".18"/>
+<path d="M556 190C648 141 726 221 852 157" stroke-opacity=".12"/>
+<path d="M576 159C665 113 713 190 850 119" stroke-opacity=".1"/>
+<path d="M708 108q6-6 12 0 6-6 12 0" stroke-width="1.4" stroke-opacity=".6"/>
+<path d="M750 94q4-4 8 0 4-4 8 0" stroke-width="1.2" stroke-opacity=".4"/>
+</g>
+</g>
 <style>
 @keyframes breeze{{0%,100%{{transform:translateX(0)}}50%{{transform:translateX(8px)}}}}
 .breeze{{animation:breeze 6s ease-in-out infinite}}

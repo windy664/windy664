@@ -10,7 +10,6 @@ on:
       - '.github/workflows/profile.yml'
       - 'scripts/update_profile.py'
       - 'scripts/render_compact.py'
-      - 'assets/torine-avatar.png'
 
 permissions:
   contents: write
