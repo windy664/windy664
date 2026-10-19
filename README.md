@@ -26,8 +26,8 @@ Also into photography and video editing.
 </ul>
 <h4>From the blog <small>(in Chinese)</small></h4>
 <ul>
+<li><a href="https://windy664.github.io/2026/10/19/p-818d804909c3/">Field notes — October 19, 2026</a> <sub>· Oct 19</sub></li>
 <li><a href="https://windy664.github.io/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/">Reverse-engineering my campus utility app</a> <sub>· Oct 14</sub></li>
-<li><a href="https://windy664.github.io/2026/10/04/windyagent-from-framework-to-application/">Should WindyAgent become a Minecraft app?</a> <sub>· Oct 04</sub></li>
 </ul>
 <!-- JOURNAL:END -->
 
