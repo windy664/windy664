@@ -63,26 +63,36 @@ def main():
     if len(repos) < 2:
         raise ValueError("Expected at least two public projects")
 
-    blog = '<p>\n' + '<br>\n'.join(
-        f'<sub>{date:%m.%d}</sub>&nbsp; <a href="{safe_link(url)}">{text(title)}</a>'
-        for date, title, url in posts[:2]
-    ) + '\n</p>'
-    # Keep cards readable at narrow widths; long metadata stays out of the layout.
     summaries = {
-        'Ru41': 'Personal automation assistant built with Rust + Codex.',
-        'OctoDining': '面向有限预算的餐饮规划应用，原型开发中。',
+        'Ru41': 'Rust 编写的个人自动化助手。',
+        'OctoDining': '面向有限预算的餐饮规划应用。',
     }
-    projects = '<table width="100%">\n<tr>\n' + '\n'.join(
-        '<td width="50%" valign="top">\n'
-        f'<a href="{safe_link(repo["html_url"])}"><b>{text(repo["name"])}</b> ↗</a><br>\n'
-        f'<sub>{text(summaries.get(repo["name"], repo["description"] or "An open-source project."))}</sub><br><br>\n'
-        f'<sub>{text(repo["language"] or "Code")} &nbsp;·&nbsp; '
-        f'Updated {repo["pushed_at"][5:10]}</sub>\n</td>'
-        for repo in repos
-    ) + '\n</tr>\n</table>'
+    editorial_titles = {
+        '/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/': '校园卡逆向：水电监控接入自动化助手',
+        '/2026/10/04/windyagent-from-framework-to-application/': 'WindyAgent：从框架到 Agent 应用？',
+    }
+    # One shared grid keeps projects and writing aligned without separate cards.
+    journal = ['<table width="100%">', '<thead><tr>',
+               '<th align="left" width="350">01 &nbsp; / &nbsp; 项目</th>',
+               '<th align="left" width="490">02 &nbsp; / &nbsp; 文章</th>',
+               '</tr></thead>', '<tbody>']
+    for repo, (date, title, url) in zip(repos, posts[:2]):
+        display_title = editorial_titles.get(urlparse(url).path, title)
+        summary = summaries.get(repo['name'], repo['description'] or 'An open-source project.')
+        summary = summary if len(summary) <= 80 else summary[:77].rstrip() + '…'
+        journal.extend([
+            '<tr>', '<td valign="top">',
+            f'<a href="{safe_link(repo["html_url"])}"><b>{text(repo["name"])}</b> ↗</a><br>',
+            f'<sub>{text(summary)}</sub><br>',
+            f'<sub>{text(repo["language"] or "Code")} · {repo["pushed_at"][5:10]}</sub>',
+            '</td>', '<td valign="top">',
+            f'<a href="{safe_link(url)}" title="{text(title)}">{text(display_title)}</a><br>',
+            f'<sub>{date:%Y.%m.%d} &nbsp; / &nbsp; BLOG</sub>',
+            '</td>', '</tr>',
+        ])
+    journal.extend(['</tbody>', '</table>'])
     readme = (ROOT / "README.md").read_text()
-    readme = replace_section(readme, "BLOG", blog)
-    readme = replace_section(readme, "PROJECTS", projects)
+    readme = replace_section(readme, "JOURNAL", '\n'.join(journal))
     data = {"current_project": repos[0]["name"]}
     (ROOT / "assets/profile-data.json").write_text(json.dumps(data, indent=2) + "\n")
     runpy.run_path(str(ROOT / "scripts/render_compact.py"))
