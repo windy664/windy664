@@ -10,6 +10,7 @@ on:
       - '.github/workflows/profile.yml'
       - 'scripts/update_profile.py'
       - 'scripts/render_compact.py'
+      - 'assets/torine-avatar.png'
 
 permissions:
   contents: write
@@ -35,8 +36,8 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/contributions.svg?color_snake=#7251bf&color_dots=#eef0fa,#a9e3dd,#87bbdf,#a18add,#d680b5
-            assets/contributions-dark.svg?palette=github-dark&color_snake=#ff9aca&color_dots=#202b40,#276e75,#4472a1,#8569be,#c777a9
+            assets/contributions.svg?color_snake=#287fa9&color_dots=#eef7fc,#b6dce8,#80c3d4,#4b9db6,#287fa9
+            assets/contributions-dark.svg?palette=github-dark&color_snake=#86c8e9&color_dots=#132635,#204759,#2f6e84,#4d9bb6,#86c8e9
       - name: Validate generated images
         run: |
           python3 - <<'PY'
@@ -46,16 +47,18 @@ jobs:
               path = Path('assets') / name
               assert path.stat().st_size > 100, name
               ET.parse(path)
-          buttons = list(Path('assets').glob('nav-retro-*.svg'))
-          assert len(buttons) == 3
-          for path in buttons:
-              ET.parse(path)
+          for kind in ('projects', 'posts'):
+              for index in range(2):
+                  for theme in ('light', 'dark'):
+                      path = Path('assets') / f'profile-{kind}-{index}-{theme}.svg'
+                      assert path.stat().st_size > 100, path
+                      ET.parse(path)
           PY
       - name: Commit changes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md assets/compact-header-*.svg assets/profile-data.json assets/contributions*.svg assets/nav-retro-*.svg
+          git add README.md assets/compact-header-*.svg assets/profile-data.json assets/profile-projects-*.svg assets/profile-posts-*.svg assets/contributions*.svg
           if git diff --cached --quiet; then
             echo 'Profile is already up to date.'
             exit 0

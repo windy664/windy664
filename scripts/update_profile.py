@@ -68,6 +68,7 @@ def main():
         'OctoDining': 'Weekly meal plans from a cafeteria menu and a budget.',
     }
     editorial_titles = {
+        '/2026/10/19/p-818d804909c3/': 'How I handle privacy in my personal agent',
         '/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/': 'Reverse-engineering my campus utility app',
         '/2026/10/04/windyagent-from-framework-to-application/': 'Should WindyAgent become a Minecraft app?',
     }
@@ -86,13 +87,19 @@ def main():
             'title': editorial_titles.get(urlparse(url).path, fallback),
             'url': url, 'date_label': date.strftime('%b %d'),
         })
-    journal = ['<h4>Things I’m working on</h4>', '<ul>']
-    for item in data['projects']:
-        journal.append(f'<li><a href="{safe_link(item["url"])}"><b>{text(item["name"])}</b></a> — {text(item["summary"])}</li>')
-    journal.extend(['</ul>', '<h4>From the blog <small>(in Chinese)</small></h4>', '<ul>'])
-    for item in data['posts']:
-        journal.append(f'<li><a href="{safe_link(item["url"])}">{text(item["title"])}</a> <sub>· {text(item["date_label"])}</sub></li>')
-    journal.append('</ul>')
+    journal = []
+    for kind, label in [('projects', 'On my desk'), ('posts', 'Recent posts')]:
+        journal.extend([f'<h4>{label}</h4>', '<p>'])
+        for index, item in enumerate(data[kind]):
+            asset = f'https://raw.githubusercontent.com/{OWNER}/{OWNER}/master/assets/profile-{kind}-{index}'
+            alt = item['name'] + ' — ' + item['summary'] if kind == 'projects' else item['title'] + ' (article in Chinese)'
+            journal.append(
+                f'<a href="{safe_link(item["url"])}"><picture>'
+                f'<source media="(prefers-color-scheme: dark)" srcset="{asset}-dark.svg" />'
+                f'<img src="{asset}-light.svg" width="410" alt="{text(alt)}" />'
+                '</picture></a>'
+            )
+        journal.append('</p>')
     readme = (ROOT / "README.md").read_text()
     readme = replace_section(readme, "JOURNAL", '\n'.join(journal))
     (ROOT / "assets/profile-data.json").write_text(json.dumps(data, indent=2) + "\n")

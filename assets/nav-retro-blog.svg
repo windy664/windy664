@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31" role="img" aria-labelledby="title"><title id="title">MY BLOG</title><style>@keyframes nudge{0%,65%,100%{transform:translateX(0)}70%,90%{transform:translateX(2px)}}.arrow{animation:nudge 4s steps(1,end) infinite}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
-<rect width="88" height="31" fill="#345caf"/>
-<path d="M1 30V1H87" fill="none" stroke="#dce3ec" stroke-width="2"/>
-<path d="M87 1V30H1" fill="none" stroke="#182433" stroke-width="2"/>
-<text x="7" y="19" fill="#ffffff" font-family="Verdana,Arial,sans-serif" font-size="9" font-weight="700">MY BLOG</text>
-<path class="arrow" d="m74 11 4 4-4 4" fill="none" stroke="#ffffff" stroke-width="2"/></svg>
