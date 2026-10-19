@@ -64,33 +64,35 @@ def main():
         raise ValueError("Expected at least two public projects")
 
     summaries = {
-        'Ru41': 'Rust 编写的个人自动化助手。',
-        'OctoDining': '面向有限预算的餐饮规划应用。',
+        'Ru41': 'Personal automation, built with Rust.',
+        'OctoDining': 'Meal planning on a budget. A work in progress.',
     }
     editorial_titles = {
-        '/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/': '校园卡逆向：水电监控接入自动化助手',
-        '/2026/10/04/windyagent-from-framework-to-application/': 'WindyAgent：从框架到 Agent 应用？',
+        '/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/': 'Reverse-engineering campus utilities for my assistant',
+        '/2026/10/04/windyagent-from-framework-to-application/': 'WindyAgent: from framework to Minecraft agent?',
     }
-    # One shared grid keeps projects and writing aligned without separate cards.
-    journal = ['<table width="100%">', '<thead><tr>',
-               '<th align="left" width="350">01 &nbsp; / &nbsp; 项目</th>',
-               '<th align="left" width="490">02 &nbsp; / &nbsp; 文章</th>',
-               '</tr></thead>', '<tbody>']
-    for repo, (date, title, url) in zip(repos, posts[:2]):
-        display_title = editorial_titles.get(urlparse(url).path, title)
-        summary = summaries.get(repo['name'], repo['description'] or 'An open-source project.')
+    # Native text flows on small screens, without GitHub's table borders or stripes.
+    journal = ['<h4>01 &nbsp; / &nbsp; Building</h4>', '<p>']
+    for index, repo in enumerate(repos):
+        description = repo['description'] or ''
+        fallback = description if description.isascii() else ''
+        summary = summaries.get(repo['name'], fallback or 'An open-source project.')
         summary = summary if len(summary) <= 80 else summary[:77].rstrip() + '…'
         journal.extend([
-            '<tr>', '<td valign="top">',
-            f'<a href="{safe_link(repo["html_url"])}"><b>{text(repo["name"])}</b> ↗</a><br>',
-            f'<sub>{text(summary)}</sub><br>',
-            f'<sub>{text(repo["language"] or "Code")} · {repo["pushed_at"][5:10]}</sub>',
-            '</td>', '<td valign="top">',
-            f'<a href="{safe_link(url)}" title="{text(title)}">{text(display_title)}</a><br>',
-            f'<sub>{date:%Y.%m.%d} &nbsp; / &nbsp; BLOG</sub>',
-            '</td>', '</tr>',
+            f'<a href="{safe_link(repo["html_url"])}"><b>{text(repo["name"])}</b></a>',
+            f' &nbsp;—&nbsp; {text(summary)}' + ('<br>' if index == 0 else ''),
         ])
-    journal.extend(['</tbody>', '</table>'])
+    journal.extend(['</p>', '<h4>02 &nbsp; / &nbsp; Writing <sub>· in Chinese</sub></h4>', '<p>'])
+    for index, (date, title, url) in enumerate(posts[:2]):
+        # New untranslated posts keep an English date label until a title is curated.
+        fallback = title if title.isascii() else f'Field notes — {date:%B %d, %Y}'
+        display_title = editorial_titles.get(urlparse(url).path, fallback)
+        journal.append(
+            f'<sub>{date:%b %d}</sub> &nbsp; '
+            f'<a href="{safe_link(url)}">{text(display_title)}</a>'
+            + ('<br>' if index == 0 else '')
+        )
+    journal.append('</p>')
     readme = (ROOT / "README.md").read_text()
     readme = replace_section(readme, "JOURNAL", '\n'.join(journal))
     data = {"current_project": repos[0]["name"]}

@@ -4,8 +4,9 @@
 </picture>
 
 <p>
-写插件、搭系统，探索 Agent 与自动化。也拍照、剪视频，记录过程中的想法。<br>
-<sub><a href="https://windy664.github.io/">博客 ↗</a> &nbsp; / &nbsp; <a href="https://github.com/windy664?tab=repositories">全部项目 ↗</a> &nbsp; / &nbsp; <a href="https://github.com/windy664?tab=stars">灵感收藏 ↗</a></sub>
+Building plugins, backend systems, and personal automations.<br>
+<sub>Off-screen: photography, video editing, and notes along the way.</sub><br>
+<sub><a href="https://windy664.github.io/">Blog ↗</a> &nbsp; / &nbsp; <a href="https://github.com/windy664?tab=repositories">Projects ↗</a> &nbsp; / &nbsp; <a href="https://github.com/windy664?tab=stars">Inspiration ↗</a></sub>
 </p>
 
 <p>
@@ -16,40 +17,22 @@
 </p>
 
 <!-- JOURNAL:START -->
-<table width="100%">
-<thead><tr>
-<th align="left" width="350">01 &nbsp; / &nbsp; 项目</th>
-<th align="left" width="490">02 &nbsp; / &nbsp; 文章</th>
-</tr></thead>
-<tbody>
-<tr>
-<td valign="top">
-<a href="https://github.com/windy664/Ru41"><b>Ru41</b> ↗</a><br>
-<sub>Rust 编写的个人自动化助手。</sub><br>
-<sub>Rust · 10-18</sub>
-</td>
-<td valign="top">
-<a href="https://windy664.github.io/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/" title="逆向 G 校校园卡小程序：水电余额监控接入个人自动化助手">校园卡逆向：水电监控接入自动化助手</a><br>
-<sub>2026.10.14 &nbsp; / &nbsp; BLOG</sub>
-</td>
-</tr>
-<tr>
-<td valign="top">
-<a href="https://github.com/windy664/OctoDining"><b>OctoDining</b> ↗</a><br>
-<sub>面向有限预算的餐饮规划应用。</sub><br>
-<sub>Python · 10-13</sub>
-</td>
-<td valign="top">
-<a href="https://windy664.github.io/2026/10/04/windyagent-from-framework-to-application/" title="WindyAgent 的下一步思考：借助 Java Harness 做 Minecraft Agent 应用？">WindyAgent：从框架到 Agent 应用？</a><br>
-<sub>2026.10.04 &nbsp; / &nbsp; BLOG</sub>
-</td>
-</tr>
-</tbody>
-</table>
+<h4>01 &nbsp; / &nbsp; Building</h4>
+<p>
+<a href="https://github.com/windy664/Ru41"><b>Ru41</b></a>
+ &nbsp;—&nbsp; Personal automation, built with Rust.<br>
+<a href="https://github.com/windy664/OctoDining"><b>OctoDining</b></a>
+ &nbsp;—&nbsp; Meal planning on a budget. A work in progress.
+</p>
+<h4>02 &nbsp; / &nbsp; Writing <sub>· in Chinese</sub></h4>
+<p>
+<sub>Oct 14</sub> &nbsp; <a href="https://windy664.github.io/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/">Reverse-engineering campus utilities for my assistant</a><br>
+<sub>Oct 04</sub> &nbsp; <a href="https://windy664.github.io/2026/10/04/windyagent-from-framework-to-application/">WindyAgent: from framework to Minecraft agent?</a>
+</p>
 <!-- JOURNAL:END -->
 
 <details>
-<summary>附页 / 一年的代码足迹</summary>
+<summary>03 &nbsp; / &nbsp; A year in code</summary>
 <br>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/contributions-dark.svg" />
