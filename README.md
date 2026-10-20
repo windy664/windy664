@@ -14,8 +14,8 @@
 </p>
 <h4>Recent posts</h4>
 <p>
-<a href="https://windy664.github.io/2026/10/19/p-818d804909c3/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-light.svg" width="410" alt="How I handle privacy in my personal agent (article in Chinese)" /></picture></a>
-<a href="https://windy664.github.io/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-light.svg" width="410" alt="Reverse-engineering my campus utility app (article in Chinese)" /></picture></a>
+<a href="https://windy664.github.io/2026/10/20/2026-10-20-ai挖洞副业-只是幸存者偏差/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-light.svg" width="410" alt="Field notes — October 20, 2026 (article in Chinese)" /></picture></a>
+<a href="https://windy664.github.io/2026/10/19/p-818d804909c3/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-light.svg" width="410" alt="How I handle privacy in my personal agent (article in Chinese)" /></picture></a>
 </p>
 <!-- JOURNAL:END -->
 
