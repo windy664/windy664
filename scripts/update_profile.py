@@ -10,6 +10,7 @@ from email.utils import parsedate_to_datetime
 from html import escape
 from pathlib import Path
 from urllib.parse import urlparse
+from profile_descriptions import HAN, english_text
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNER = "windy664"
@@ -36,20 +37,50 @@ def replace_section(readme, name, body):
                   lambda _: f"{start}\n{body}\n{end}", readme, flags=re.S)
 
 
+def latest_posts(feed, now):
+    posts = []
+    for item in feed.findall('./channel/item'):
+        published = parsedate_to_datetime(item.findtext('pubDate'))
+        title = item.findtext('title', '').strip()
+        url = item.findtext('link', '').strip()
+        if not title or not url:
+            raise ValueError('RSS item is missing its title or link')
+        if published <= now:
+            posts.append((published, title, url))
+    posts.sort(key=lambda post: post[0], reverse=True)
+    if len(posts) < 2:
+        raise ValueError('Expected at least two published blog posts')
+    return posts[:2]
+
+
+def profile_data(repos, posts, translations):
+    data = {'current_project': repos[0]['name'], 'projects': [], 'posts': []}
+    for repo in repos:
+        description = repo['description'] or ''
+        data['projects'].append({
+            'name': repo['name'], 'url': repo['html_url'],
+            'language': repo['language'] or 'Code',
+            'description': description,
+            'summary': english_text(description, translations),
+        })
+    for date, title, url in posts:
+        data['posts'].append({
+            'source_title': title,
+            'title': english_text(title, translations),
+            'url': url, 'date_label': date.strftime('%b %d'),
+            'published_at': date.isoformat(),
+            'source_language': 'zh' if HAN.search(title) else 'en',
+        })
+    return data
+
+
 def main():
     request = urllib.request.Request(
         "https://windy664.github.io/rss.xml", headers={"User-Agent": "Torine-Profile"}
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         feed = ET.fromstring(response.read())
-    posts = []
-    for item in feed.findall("./channel/item"):
-        published = parsedate_to_datetime(item.findtext("pubDate"))
-        if published <= datetime.now(timezone.utc):
-            posts.append((published, item.findtext("title"), item.findtext("link")))
-    posts.sort(key=lambda post: post[0], reverse=True)
-    if len(posts) < 2:
-        raise ValueError("Expected at least two published blog posts")
+    posts = latest_posts(feed, datetime.now(timezone.utc))
 
     result = subprocess.run(
         ["gh", "api", f"users/{OWNER}/repos?sort=pushed&per_page=100"],
@@ -63,36 +94,17 @@ def main():
     if len(repos) < 2:
         raise ValueError("Expected at least two public projects")
 
-    summaries = {
-        'Ru41': 'A Rust assistant for RSS, papers, and dorm utility bills.',
-        'OctoDining': 'Weekly meal plans from a cafeteria menu and a budget.',
-    }
-    editorial_titles = {
-        '/2026/10/19/p-818d804909c3/': 'How I handle privacy in my personal agent',
-        '/2026/10/14/2026-10-14-reverse-engineering-campus-card-waterfee/': 'Reverse-engineering my campus utility app',
-        '/2026/10/04/windyagent-from-framework-to-application/': 'Should WindyAgent become a Minecraft app?',
-    }
-    data = {"current_project": repos[0]['name'], 'projects': [], 'posts': []}
-    for repo in repos:
-        description = repo['description'] or ''
-        fallback = description if description.isascii() else ''
-        summary = summaries.get(repo['name'], fallback or 'An open-source project.')
-        data['projects'].append({
-            'name': repo['name'], 'url': repo['html_url'],
-            'language': repo['language'] or 'Code', 'summary': summary,
-        })
-    for date, title, url in posts[:2]:
-        fallback = title if title.isascii() else f'Field notes — {date:%B %d, %Y}'
-        data['posts'].append({
-            'title': editorial_titles.get(urlparse(url).path, fallback),
-            'url': url, 'date_label': date.strftime('%b %d'),
-        })
+    cache_path = ROOT / 'assets/profile-translations.json'
+    translations = json.loads(cache_path.read_text()) if cache_path.exists() else {}
+    data = profile_data(repos, posts, translations)
     journal = []
     for kind, label in [('projects', 'On my desk'), ('posts', 'Recent posts')]:
         journal.extend([f'<h4>{label}</h4>', '<p>'])
         for index, item in enumerate(data[kind]):
             asset = f'https://raw.githubusercontent.com/{OWNER}/{OWNER}/master/assets/profile-{kind}-{index}'
-            alt = item['name'] + ' — ' + item['summary'] if kind == 'projects' else item['title'] + ' (article in Chinese)'
+            alt = (item['name'] + (' — ' + item['summary'] if item['summary'] else '')
+                   if kind == 'projects' else item['title'] +
+                   (' (article in Chinese)' if item['source_language'] == 'zh' else ''))
             journal.append(
                 f'<a href="{safe_link(item["url"])}"><picture>'
                 f'<source media="(prefers-color-scheme: dark)" srcset="{asset}-dark.svg" />'
@@ -102,9 +114,10 @@ def main():
         journal.append('</p>')
     readme = (ROOT / "README.md").read_text()
     readme = replace_section(readme, "JOURNAL", '\n'.join(journal))
-    (ROOT / "assets/profile-data.json").write_text(json.dumps(data, indent=2) + "\n")
+    (ROOT / "assets/profile-data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
     runpy.run_path(str(ROOT / "scripts/render_compact.py"))
     (ROOT / "README.md").write_text(readme)
+    cache_path.write_text(json.dumps(translations, ensure_ascii=False, indent=2, sort_keys=True) + '\n')
     print("Updated two blog posts, two public projects, and both banner themes.")
 
 

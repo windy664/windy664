@@ -68,7 +68,7 @@ for theme in ('light', 'dark'):
             is_project = kind == 'projects'
             title = item['name'] if is_project else item['title']
             body = f'<path d="M0 1H398" stroke="{blue}" stroke-opacity=".4"/>'
-            label = item['language'] if is_project else item['date_label'] + ' / BLOG · ZH'
+            label = item['language'] if is_project else item['date_label'] + ' / BLOG · ' + item['source_language'].upper()
             body += text(0, 22, label.upper(), 10, muted, 500, extra='letter-spacing="1.3"')
             title_lines = [textwrap.shorten(title, width=24, placeholder='…')] if is_project else textwrap.wrap(title, 32, max_lines=2, placeholder='…')
             for row, line in enumerate(title_lines):
