@@ -9,8 +9,8 @@
 <!-- JOURNAL:START -->
 <h4>On my desk</h4>
 <p>
-<a href="https://github.com/windy664/Ru41"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-light.svg" width="410" alt="Ru41 — A Rust assistant for RSS, papers, and dorm utility bills." /></picture></a>
-<a href="https://github.com/windy664/OctoDining"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-light.svg" width="410" alt="OctoDining — Weekly meal plans from a cafeteria menu and a budget." /></picture></a>
+<a href="https://github.com/windy664/PlayerShelter"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-light.svg" width="410" alt="PlayerShelter — An open-source project." /></picture></a>
+<a href="https://github.com/windy664/Ru41"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-light.svg" width="410" alt="Ru41 — A Rust assistant for RSS, papers, and dorm utility bills." /></picture></a>
 </p>
 <h4>Recent posts</h4>
 <p>
