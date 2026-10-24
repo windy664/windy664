@@ -16,11 +16,14 @@ Blog dates, links and original titles come directly from the latest two publishe
 RSS entries. `source_title` records the original; `title` is its English translation.
 There are no title overrides or generic "Field notes" substitutes.
 
-Chinese descriptions and titles are translated with Tencent TranSmart through the
-[Translators library](https://github.com/UlionTse/translators). Only these public
-source texts are sent to the translation service. No API key is needed. Requests
-have a 25-second timeout; service errors fail the refresh instead of producing
-placeholder content. Translations are saved in
+Chinese descriptions and titles use Google Translate through
+[deep-translator](https://github.com/nidhaloff/deep-translator), with Tencent
+TranSmart through [Translators](https://github.com/UlionTse/translators) as a fallback.
+Only these public source texts are sent to the services; no API key is needed.
+Google has a 35-second overall deadline and Tencent requests a 25-second timeout.
+Certificate validation stays enabled. If both services fail, the refresh fails
+instead of producing placeholder content. Translations, including the engine
+actually used, are saved in
 `assets/profile-translations.json`, keyed by the source text hash and checked
 against the provider version. Changed or removed source text never reuses old text.
 Machine translations may be imperfect; an English repository description bypasses
