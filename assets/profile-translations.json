@@ -1,1 +1,20 @@
-{}
+{
+  "be342e10369dc6371dfe37c4c12545a19bfe74fdc7d8bd17e1a5a2f4f698aa61": {
+    "engine": "mymemory",
+    "english": "AI excavation sideline, just survivor deviation",
+    "provider": "mymemory-zh-en/v1",
+    "source": "AI 挖洞副业，只是幸存者偏差"
+  },
+  "db12ef2d25c1da778994fb3f79766bb258352fec4b4ae842699aaf5e50c2cb61": {
+    "engine": "mymemory",
+    "english": "Next generation land management system",
+    "provider": "mymemory-zh-en/v1",
+    "source": "下一代地皮管理系统"
+  },
+  "fa2035540b99df4a72810611cf9db39b1a0b0e8ab89dda8e8f55cff246f84eb7": {
+    "engine": "mymemory",
+    "english": "When Living Data Goes to the Agent: How I Handle Personal Privacy",
+    "provider": "mymemory-zh-en/v1",
+    "source": "当生活数据进入 Agent：我如何处理个人隐私"
+  }
+}

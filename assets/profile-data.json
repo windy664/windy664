@@ -1,25 +1,25 @@
 {
-  "current_project": "Ru41",
+  "current_project": "Guildshelter",
   "projects": [
+    {
+      "name": "Guildshelter",
+      "url": "https://github.com/windy664/Guildshelter",
+      "language": "Java",
+      "description": "下一代地皮管理系统",
+      "summary": "Next generation land management system"
+    },
     {
       "name": "Ru41",
       "url": "https://github.com/windy664/Ru41",
       "language": "Rust",
       "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
-    },
-    {
-      "name": "PlayerShelter",
-      "url": "https://github.com/windy664/PlayerShelter",
-      "language": "Java",
-      "description": "一个高版本的家园插件",
-      "summary": "A high version of Home Plugin"
     }
   ],
   "posts": [
     {
       "source_title": "AI 挖洞副业，只是幸存者偏差",
-      "title": "AI digging holes sideline, just survivor bias",
+      "title": "AI excavation sideline, just survivor deviation",
       "url": "https://windy664.github.io/2026/10/20/2026-10-20-ai挖洞副业-只是幸存者偏差/",
       "date_label": "Oct 20",
       "published_at": "2026-10-20T04:00:00+00:00",
@@ -27,7 +27,7 @@
     },
     {
       "source_title": "当生活数据进入 Agent：我如何处理个人隐私",
-      "title": "When Life Data Comes to Agents: How I Handle Personal Privacy",
+      "title": "When Living Data Goes to the Agent: How I Handle Personal Privacy",
       "url": "https://windy664.github.io/2026/10/19/p-818d804909c3/",
       "date_label": "Oct 19",
       "published_at": "2026-10-19T04:00:00+00:00",
