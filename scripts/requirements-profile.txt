@@ -1,3 +1,0 @@
-# Used only when Chinese source text has no valid English translation cache.
-translators==6.0.4
-deep-translator==1.11.4

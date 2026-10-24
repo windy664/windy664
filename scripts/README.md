@@ -16,14 +16,12 @@ Blog dates, links and original titles come directly from the latest two publishe
 RSS entries. `source_title` records the original; `title` is its English translation.
 There are no title overrides or generic "Field notes" substitutes.
 
-Chinese descriptions and titles use Google Translate through
-[deep-translator](https://github.com/nidhaloff/deep-translator), with Tencent
-TranSmart through [Translators](https://github.com/UlionTse/translators) as a fallback.
-Only these public source texts are sent to the services; no API key is needed.
-Google has a 35-second overall deadline and Tencent requests a 25-second timeout.
-Certificate validation stays enabled. If both services fail, the refresh fails
-instead of producing placeholder content. Translations, including the engine
-actually used, are saved in
+Chinese descriptions and titles use the documented
+[MyMemory translation API](https://mymemory.translated.net/doc/spec.php).
+Only these public source texts are sent to the service; no API key is needed.
+Each request is limited to 500 UTF-8 bytes and has a 30-second timeout.
+Certificate validation stays enabled. Service errors or exhausted quota fail
+the refresh instead of producing placeholder content. Translations are saved in
 `assets/profile-translations.json`, keyed by the source text hash and checked
 against the provider version. Changed or removed source text never reuses old text.
 Machine translations may be imperfect; an English repository description bypasses
@@ -36,7 +34,6 @@ next scheduled or manual run.
 Run locally with Python 3.12 and an authenticated `gh` CLI:
 
 ```sh
-python3 -m pip install -r scripts/requirements-profile.txt
 python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/update_profile.py
 ```

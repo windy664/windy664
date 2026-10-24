@@ -1,33 +1,52 @@
 """Translate source descriptions and RSS titles without per-project overrides."""
 import hashlib
+import json
 import re
-import subprocess
-import sys
+import urllib.request
+from html import unescape
+from urllib.parse import urlencode
 
-TRANSLATOR_ID = 'google-qqtransmart-zh-en/v2'
+TRANSLATOR_ID = 'mymemory-zh-en/v1'
 HAN = re.compile(r'[\u3400-\u9fff\uf900-\ufaff\U00020000-\U0003134f]')
+
+
+def utf8_segments(source, limit=500):
+    """Respect the service's byte limit without dropping source characters."""
+    while source:
+        size = 0
+        end = 0
+        for char in source:
+            size += len(char.encode('utf-8'))
+            if size > limit:
+                break
+            end += 1
+        if end < len(source):
+            boundaries = list(re.finditer(r'[\s，。！？,;.!?]', source[:end]))
+            if boundaries and boundaries[-1].end() > end // 2:
+                end = boundaries[-1].end()
+        yield source[:end]
+        source = source[end:]
 
 
 def translate_chinese(source):
     # Only public repository descriptions and RSS titles reach this service.
     # English text and valid cached translations make no translation requests.
-    try:
-        # Isolate the web client so its HTTP requests have an overall deadline.
-        result = subprocess.run(
-            [sys.executable, '-c',
-             'from deep_translator import GoogleTranslator; import sys; '
-             'print(GoogleTranslator(source="zh-CN", target="en").translate(sys.stdin.read()))'],
-            input=source, capture_output=True, text=True, check=True, timeout=35,
-        ).stdout.strip()
-        if result and not HAN.search(result):
-            return result, 'google'
-    except (subprocess.SubprocessError, OSError) as error:
-        print(f'Google translation unavailable ({type(error).__name__}); trying Tencent.', file=sys.stderr)
-    import translators
-    result = translators.translate_text(
-        source, translator='qqTranSmart', from_language='zh', to_language='en', timeout=25,
-    )
-    return result, 'qqtransmart'
+    translated = []
+    for segment in utf8_segments(source):
+        query = urlencode({'q': segment, 'langpair': 'zh-CN|en-US', 'mt': '1'})
+        request = urllib.request.Request(
+            'https://api.mymemory.translated.net/get?' + query,
+            headers={'User-Agent': 'Torine-Profile/1.0'},
+        )
+        with urllib.request.urlopen(request, timeout=30) as response:
+            data = json.load(response)
+        if data.get('quotaFinished') or str(data.get('responseStatus')) != '200':
+            raise RuntimeError(f'Translation service rejected the request: {data.get("responseStatus")}')
+        result = unescape(data.get('responseData', {}).get('translatedText', '')).strip()
+        if not result or HAN.search(result):
+            raise ValueError('Translation service did not return English text')
+        translated.append(result)
+    return ' '.join(translated), 'mymemory'
 
 
 def english_text(value, cache, translate=None):

@@ -1,10 +1,24 @@
 import unittest
 from unittest.mock import Mock
 
-from profile_descriptions import english_text
+from profile_descriptions import english_text, utf8_segments, translate_chinese
 
 
 class ProjectDescriptionsTest(unittest.TestCase):
+    def test_long_mixed_source_keeps_all_characters_within_api_byte_limit(self):
+        source = '这是一个 Minecraft 插件，支持跨服。🤖 ' * 40
+        segments = list(utf8_segments(source))
+        self.assertEqual(''.join(segments), source)
+        self.assertTrue(all(0 < len(part.encode()) <= 500 for part in segments))
+
+    def test_api_quota_message_is_not_used_as_translated_content(self):
+        from io import BytesIO
+        from unittest.mock import patch
+        response = BytesIO(b'{"quotaFinished":true,"responseStatus":200,"responseData":{"translatedText":"Quota exceeded"}}')
+        with patch('urllib.request.urlopen', return_value=response):
+            with self.assertRaises(RuntimeError):
+                translate_chinese('需要翻译。')
+
     def test_english_with_emoji_and_unicode_punctuation_is_preserved(self):
         description = '🤖 Rust + Codex — automation, photos & messaging.'
         translate = Mock(side_effect=AssertionError('English must not be translated'))
