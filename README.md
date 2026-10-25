@@ -9,8 +9,8 @@
 <!-- JOURNAL:START -->
 <h4>On my desk</h4>
 <p>
-<a href="https://github.com/windy664/Guildshelter"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-light.svg" width="410" alt="Guildshelter — Next generation land management system" /></picture></a>
-<a href="https://github.com/windy664/Ru41"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-light.svg" width="410" alt="Ru41 — 🤖 Rust + Codex personal automation assistant — Obsidian, information workflows &amp; messaging." /></picture></a>
+<a href="https://github.com/windy664/Ru41"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-light.svg" width="410" alt="Ru41 — 🤖 Rust + Codex personal automation assistant — Obsidian, information workflows &amp; messaging." /></picture></a>
+<a href="https://github.com/windy664/OctoDining"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-light.svg" width="410" alt="OctoDining — 🍽️ OctoDining — a dining-planning app for budget-conscious people | OctoScript + OctoSense | Prototype in development, system agent pending integration." /></picture></a>
 </p>
 <h4>Recent posts</h4>
 <p>

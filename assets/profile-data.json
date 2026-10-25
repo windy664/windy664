@@ -1,19 +1,19 @@
 {
-  "current_project": "Guildshelter",
+  "current_project": "Ru41",
   "projects": [
-    {
-      "name": "Guildshelter",
-      "url": "https://github.com/windy664/Guildshelter",
-      "language": "Java",
-      "description": "下一代地皮管理系统",
-      "summary": "Next generation land management system"
-    },
     {
       "name": "Ru41",
       "url": "https://github.com/windy664/Ru41",
       "language": "Rust",
       "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
+    },
+    {
+      "name": "OctoDining",
+      "url": "https://github.com/windy664/OctoDining",
+      "language": "Python",
+      "description": "🍽️ OctoDining — a dining-planning app for budget-conscious people | OctoScript + OctoSense | Prototype in development, system agent pending integration.",
+      "summary": "🍽️ OctoDining — a dining-planning app for budget-conscious people | OctoScript + OctoSense | Prototype in development, system agent pending integration."
     }
   ],
   "posts": [
