@@ -1,19 +1,19 @@
 {
-  "current_project": "Ru41",
+  "current_project": "Torine-hackathon-agent-ts",
   "projects": [
+    {
+      "name": "Torine-hackathon-agent-ts",
+      "url": "https://github.com/windy664/Torine-hackathon-agent-ts",
+      "language": "TypeScript",
+      "description": "🛠️ ARC-Bench programming agent — requirement decomposition, multi-agent collaboration & visual acceptance, shipping dev tasks within a tight token budget.",
+      "summary": "🛠️ ARC-Bench programming agent — requirement decomposition, multi-agent collaboration & visual acceptance, shipping dev tasks within a tight token budget."
+    },
     {
       "name": "Ru41",
       "url": "https://github.com/windy664/Ru41",
       "language": "Rust",
       "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
-    },
-    {
-      "name": "OctoDining",
-      "url": "https://github.com/windy664/OctoDining",
-      "language": "Python",
-      "description": "🍽️ OctoDining — a dining-planning app for budget-conscious people | OctoScript + OctoSense | Prototype in development, system agent pending integration.",
-      "summary": "🍽️ OctoDining — a dining-planning app for budget-conscious people | OctoScript + OctoSense | Prototype in development, system agent pending integration."
     }
   ],
   "posts": [
