@@ -1,19 +1,19 @@
 {
-  "current_project": "Torine-hackathon-agent-ts",
+  "current_project": "Ru41",
   "projects": [
-    {
-      "name": "Torine-hackathon-agent-ts",
-      "url": "https://github.com/windy664/Torine-hackathon-agent-ts",
-      "language": "TypeScript",
-      "description": "🛠️ ARC-Bench programming agent — requirement decomposition, multi-agent collaboration & visual acceptance, shipping dev tasks within a tight token budget.",
-      "summary": "🛠️ ARC-Bench programming agent — requirement decomposition, multi-agent collaboration & visual acceptance, shipping dev tasks within a tight token budget."
-    },
     {
       "name": "Ru41",
       "url": "https://github.com/windy664/Ru41",
       "language": "Rust",
       "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
+    },
+    {
+      "name": "Torine-hackathon-agent-ts",
+      "url": "https://github.com/windy664/Torine-hackathon-agent-ts",
+      "language": "TypeScript",
+      "description": "🛠️ ARC-Bench programming agent — requirement decomposition, multi-agent collaboration & visual acceptance, shipping dev tasks within a tight token budget.",
+      "summary": "🛠️ ARC-Bench programming agent — requirement decomposition, multi-agent collaboration & visual acceptance, shipping dev tasks within a tight token budget."
     }
   ],
   "posts": [

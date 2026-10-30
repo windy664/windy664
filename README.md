@@ -9,8 +9,8 @@
 <!-- JOURNAL:START -->
 <h4>On my desk</h4>
 <p>
-<a href="https://github.com/windy664/Torine-hackathon-agent-ts"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-light.svg" width="410" alt="Torine-hackathon-agent-ts — 🛠️ ARC-Bench programming agent — requirement decomposition, multi-agent collaboration &amp; visual acceptance, shipping dev tasks within a tight token budget." /></picture></a>
-<a href="https://github.com/windy664/Ru41"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-light.svg" width="410" alt="Ru41 — 🤖 Rust + Codex personal automation assistant — Obsidian, information workflows &amp; messaging." /></picture></a>
+<a href="https://github.com/windy664/Ru41"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-light.svg" width="410" alt="Ru41 — 🤖 Rust + Codex personal automation assistant — Obsidian, information workflows &amp; messaging." /></picture></a>
+<a href="https://github.com/windy664/Torine-hackathon-agent-ts"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-light.svg" width="410" alt="Torine-hackathon-agent-ts — 🛠️ ARC-Bench programming agent — requirement decomposition, multi-agent collaboration &amp; visual acceptance, shipping dev tasks within a tight token budget." /></picture></a>
 </p>
 <h4>Recent posts</h4>
 <p>
