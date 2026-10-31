@@ -1,36 +1,36 @@
 {
-  "current_project": "Ru41",
+  "current_project": "omarchy-lyrics-rs",
   "projects": [
+    {
+      "name": "omarchy-lyrics-rs",
+      "url": "https://github.com/windy664/omarchy-lyrics-rs",
+      "language": "Rust",
+      "description": "",
+      "summary": ""
+    },
     {
       "name": "Ru41",
       "url": "https://github.com/windy664/Ru41",
       "language": "Rust",
       "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
-    },
-    {
-      "name": "Torine-hackathon-agent-ts",
-      "url": "https://github.com/windy664/Torine-hackathon-agent-ts",
-      "language": "TypeScript",
-      "description": "🛠️ ARC-Bench programming agent — requirement decomposition, multi-agent collaboration & visual acceptance, shipping dev tasks within a tight token budget.",
-      "summary": "🛠️ ARC-Bench programming agent — requirement decomposition, multi-agent collaboration & visual acceptance, shipping dev tasks within a tight token budget."
     }
   ],
   "posts": [
+    {
+      "source_title": "下回分解：批判书写完的第三天，我把主力机换血成了 Omarchy",
+      "title": "Next breakdown: On the third day after the critique was written, I switched the main engine to Omarchy",
+      "url": "https://windy664.github.io/2026/10/31/2026-10-31-omarchy-换血实录-从批判者到补丁匠/",
+      "date_label": "Oct 31",
+      "published_at": "2026-10-31T04:00:00+00:00",
+      "source_language": "zh"
+    },
     {
       "source_title": "一切透明的都在卡：我的 GNOME 卡顿批判书，以及我对 Omarchy 的期待",
       "title": "Everything is in the cards: my GNOME Katon critique and my expectations of Omarchy",
       "url": "https://windy664.github.io/2026/10/27/p-74f90b587807/",
       "date_label": "Oct 27",
       "published_at": "2026-10-27T04:00:00+00:00",
-      "source_language": "zh"
-    },
-    {
-      "source_title": "AI 挖洞副业，只是幸存者偏差",
-      "title": "AI excavation sideline, just survivor deviation",
-      "url": "https://windy664.github.io/2026/10/20/2026-10-20-ai挖洞副业-只是幸存者偏差/",
-      "date_label": "Oct 20",
-      "published_at": "2026-10-20T04:00:00+00:00",
       "source_language": "zh"
     }
   ]
