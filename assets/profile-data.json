@@ -1,19 +1,19 @@
 {
-  "current_project": "omarchy-lyrics-rs",
+  "current_project": "Ru41",
   "projects": [
-    {
-      "name": "omarchy-lyrics-rs",
-      "url": "https://github.com/windy664/omarchy-lyrics-rs",
-      "language": "Rust",
-      "description": "",
-      "summary": ""
-    },
     {
       "name": "Ru41",
       "url": "https://github.com/windy664/Ru41",
       "language": "Rust",
       "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
+    },
+    {
+      "name": "dock-minimize-rs",
+      "url": "https://github.com/windy664/dock-minimize-rs",
+      "language": "Rust",
+      "description": "Rust rewrite of the dock-minimize helper for the rosakodu.dock plugin on Omarchy (Hyprland) — native binary instead of shelling out to Python on every dock click",
+      "summary": "Rust rewrite of the dock-minimize helper for the rosakodu.dock plugin on Omarchy (Hyprland) — native binary instead of shelling out to Python on every dock click"
     }
   ],
   "posts": [
