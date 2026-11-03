@@ -1,33 +1,33 @@
 {
-  "current_project": "XingtuBot-Spigot",
+  "current_project": "Ru41",
   "projects": [
-    {
-      "name": "XingtuBot-Spigot",
-      "url": "https://github.com/windy664/XingtuBot-Spigot",
-      "language": "Java",
-      "description": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis.",
-      "summary": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis."
-    },
     {
       "name": "Ru41",
       "url": "https://github.com/windy664/Ru41",
       "language": "Rust",
       "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
+    },
+    {
+      "name": "XingtuBot-Spigot",
+      "url": "https://github.com/windy664/XingtuBot-Spigot",
+      "language": "Java",
+      "description": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis.",
+      "summary": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis."
     }
   ],
   "posts": [
     {
-      "source_title": "一个人的 Rust 系统，怎么迭代得动——ru41 插件化这半年的账",
-      "title": "A person's Rust system, how to iterate --ru41 plugs into the account for this half a year",
-      "url": "https://windy664.github.io/2026/11/01/2026-11-01-ru41-plugin-architecture-solo-dev-iteration/",
+      "source_title": "一个人维护的 Rust 系统，是怎么迭代起来的",
+      "title": "How is the Rust system maintained by one person iterated?",
+      "url": "https://windy664.github.io/2026/11/01/2026-11-01-一个人维护的rust系统-是怎么迭代起来的/",
       "date_label": "Nov 01",
       "published_at": "2026-11-01T04:00:00+00:00",
       "source_language": "zh"
     },
     {
-      "source_title": "下回分解：批判书写完的第三天，我把主力机换血成了 Omarchy",
-      "title": "Next breakdown: On the third day after the critique was written, I switched the main engine to Omarchy",
+      "source_title": "批判书写完的第三天，我把主力机换成了 Omarchy",
+      "title": "On the third day after the critique was written, I switched the main engine to Omarchy",
       "url": "https://windy664.github.io/2026/10/31/2026-10-31-omarchy-换血实录-从批判者到补丁匠/",
       "date_label": "Oct 31",
       "published_at": "2026-10-31T04:00:00+00:00",

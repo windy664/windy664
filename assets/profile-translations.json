@@ -1,9 +1,21 @@
 {
+  "13cf922158b3d32b64aff229eea05aa62df32ae29adcc7441e6cf2d0f508ae54": {
+    "engine": "mymemory",
+    "english": "On the third day after the critique was written, I switched the main engine to Omarchy",
+    "provider": "mymemory-zh-en/v1",
+    "source": "批判书写完的第三天，我把主力机换成了 Omarchy"
+  },
   "1a1626b4aee106963ca21ea6812f118aac439e7fb33efc1e9de66ebd2ccf22ba": {
     "engine": "mymemory",
     "english": "Everything is in the cards: my GNOME Katon critique and my expectations of Omarchy",
     "provider": "mymemory-zh-en/v1",
     "source": "一切透明的都在卡：我的 GNOME 卡顿批判书，以及我对 Omarchy 的期待"
+  },
+  "4d33dd83be68e40c654152767a708aa3b8a4e20f671879b42ba1febdbe0f0200": {
+    "engine": "mymemory",
+    "english": "How is the Rust system maintained by one person iterated?",
+    "provider": "mymemory-zh-en/v1",
+    "source": "一个人维护的 Rust 系统，是怎么迭代起来的"
   },
   "92813608caceb5acb3ec4598bbd6178ef6e7d5cf7cc7d280ec80d4fb1e727443": {
     "engine": "mymemory",
