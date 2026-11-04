@@ -14,8 +14,8 @@
 </p>
 <h4>Recent posts</h4>
 <p>
-<a href="https://windy664.github.io/2026/11/01/2026-11-01-一个人维护的rust系统-是怎么迭代起来的/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-light.svg" width="410" alt="How is the Rust system maintained by one person iterated? (article in Chinese)" /></picture></a>
-<a href="https://windy664.github.io/2026/10/31/2026-10-31-omarchy-换血实录-从批判者到补丁匠/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-light.svg" width="410" alt="On the third day after the critique was written, I switched the main engine to Omarchy (article in Chinese)" /></picture></a>
+<a href="https://windy664.github.io/2026/11/04/2026-11-04-一个rust应用-二十七个容器/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-light.svg" width="410" alt="One Rust app, twenty-seven containers (article in Chinese)" /></picture></a>
+<a href="https://windy664.github.io/2026/11/04/2026-11-04-用git实现obsidian双向同步/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-light.svg" width="410" alt="Obsidian two-way synchronization with git (article in Chinese)" /></picture></a>
 </p>
 <!-- JOURNAL:END -->
 

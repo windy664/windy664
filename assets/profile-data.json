@@ -18,19 +18,19 @@
   ],
   "posts": [
     {
-      "source_title": "一个人维护的 Rust 系统，是怎么迭代起来的",
-      "title": "How is the Rust system maintained by one person iterated?",
-      "url": "https://windy664.github.io/2026/11/01/2026-11-01-一个人维护的rust系统-是怎么迭代起来的/",
-      "date_label": "Nov 01",
-      "published_at": "2026-11-01T04:00:00+00:00",
+      "source_title": "一个 Rust 应用，二十七个容器",
+      "title": "One Rust app, twenty-seven containers",
+      "url": "https://windy664.github.io/2026/11/04/2026-11-04-一个rust应用-二十七个容器/",
+      "date_label": "Nov 04",
+      "published_at": "2026-11-04T04:00:00+00:00",
       "source_language": "zh"
     },
     {
-      "source_title": "批判书写完的第三天，我把主力机换成了 Omarchy",
-      "title": "On the third day after the critique was written, I switched the main engine to Omarchy",
-      "url": "https://windy664.github.io/2026/10/31/2026-10-31-omarchy-换血实录-从批判者到补丁匠/",
-      "date_label": "Oct 31",
-      "published_at": "2026-10-31T04:00:00+00:00",
+      "source_title": "用git实现obsidian双向同步",
+      "title": "Obsidian two-way synchronization with git",
+      "url": "https://windy664.github.io/2026/11/04/2026-11-04-用git实现obsidian双向同步/",
+      "date_label": "Nov 04",
+      "published_at": "2026-11-04T04:00:00+00:00",
       "source_language": "zh"
     }
   ]

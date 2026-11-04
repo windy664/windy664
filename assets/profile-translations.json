@@ -11,6 +11,12 @@
     "provider": "mymemory-zh-en/v1",
     "source": "一切透明的都在卡：我的 GNOME 卡顿批判书，以及我对 Omarchy 的期待"
   },
+  "3879cafe649893ae9874ccebfb17e6b338902bf11dce43a12c6c590feaca1431": {
+    "engine": "mymemory",
+    "english": "One Rust app, twenty-seven containers",
+    "provider": "mymemory-zh-en/v1",
+    "source": "一个 Rust 应用，二十七个容器"
+  },
   "4d33dd83be68e40c654152767a708aa3b8a4e20f671879b42ba1febdbe0f0200": {
     "engine": "mymemory",
     "english": "How is the Rust system maintained by one person iterated?",
@@ -34,6 +40,12 @@
     "english": "Next generation land management system",
     "provider": "mymemory-zh-en/v1",
     "source": "下一代地皮管理系统"
+  },
+  "eb9ab05e3d7e1297fa8010450aeba07fc5294c0e68b49610a7acb8566a6baa0e": {
+    "engine": "mymemory",
+    "english": "Obsidian two-way synchronization with git",
+    "provider": "mymemory-zh-en/v1",
+    "source": "用git实现obsidian双向同步"
   },
   "eccb2c540609152c624af024ac6fe623c607aec56a564b09a3b2348940f8266a": {
     "engine": "mymemory",
