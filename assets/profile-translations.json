@@ -29,6 +29,12 @@
     "provider": "mymemory-zh-en/v1",
     "source": "一个人的 Rust 系统，怎么迭代得动——ru41 插件化这半年的账"
   },
+  "b8ed25a4cb8f4733ff358643fb960bbb9ca73b312b86bdc894c4c4434e755214": {
+    "engine": "mymemory",
+    "english": "Reverse square academic affairs, the class schedule is used to stare at",
+    "provider": "mymemory-zh-en/v1",
+    "source": "逆向正方教务，课表是拿来盯的"
+  },
   "be342e10369dc6371dfe37c4c12545a19bfe74fdc7d8bd17e1a5a2f4f698aa61": {
     "engine": "mymemory",
     "english": "AI excavation sideline, just survivor deviation",
@@ -40,6 +46,12 @@
     "english": "Next generation land management system",
     "provider": "mymemory-zh-en/v1",
     "source": "下一代地皮管理系统"
+  },
+  "dd2fbeba60886982eba74920e63d9bf6ebacb5c7def371db8f9e681f8654fe5e": {
+    "engine": "mymemory",
+    "english": "Package gone, no echo - three black holes in a multi-dial environment",
+    "provider": "mymemory-zh-en/v1",
+    "source": "包走了，没有回音-多拨环境里的三种黑洞"
   },
   "eb9ab05e3d7e1297fa8010450aeba07fc5294c0e68b49610a7acb8566a6baa0e": {
     "engine": "mymemory",

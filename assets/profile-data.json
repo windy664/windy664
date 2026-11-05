@@ -18,19 +18,19 @@
   ],
   "posts": [
     {
-      "source_title": "一个 Rust 应用，二十七个容器",
-      "title": "One Rust app, twenty-seven containers",
-      "url": "https://windy664.github.io/2026/11/04/2026-11-04-一个rust应用-二十七个容器/",
-      "date_label": "Nov 04",
-      "published_at": "2026-11-04T04:00:00+00:00",
+      "source_title": "包走了，没有回音-多拨环境里的三种黑洞",
+      "title": "Package gone, no echo - three black holes in a multi-dial environment",
+      "url": "https://windy664.github.io/2026/11/05/2026-11-05-包走了没有回音-多拨环境里的三种黑洞/",
+      "date_label": "Nov 05",
+      "published_at": "2026-11-05T04:00:00+00:00",
       "source_language": "zh"
     },
     {
-      "source_title": "用git实现obsidian双向同步",
-      "title": "Obsidian two-way synchronization with git",
-      "url": "https://windy664.github.io/2026/11/04/2026-11-04-用git实现obsidian双向同步/",
-      "date_label": "Nov 04",
-      "published_at": "2026-11-04T04:00:00+00:00",
+      "source_title": "逆向正方教务，课表是拿来盯的",
+      "title": "Reverse square academic affairs, the class schedule is used to stare at",
+      "url": "https://windy664.github.io/2026/11/02/2026-11-04-逆向正方教务-课表是拿来盯的/",
+      "date_label": "Nov 02",
+      "published_at": "2026-11-02T04:00:00+00:00",
       "source_language": "zh"
     }
   ]

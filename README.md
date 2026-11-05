@@ -14,8 +14,8 @@
 </p>
 <h4>Recent posts</h4>
 <p>
-<a href="https://windy664.github.io/2026/11/04/2026-11-04-一个rust应用-二十七个容器/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-light.svg" width="410" alt="One Rust app, twenty-seven containers (article in Chinese)" /></picture></a>
-<a href="https://windy664.github.io/2026/11/04/2026-11-04-用git实现obsidian双向同步/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-light.svg" width="410" alt="Obsidian two-way synchronization with git (article in Chinese)" /></picture></a>
+<a href="https://windy664.github.io/2026/11/05/2026-11-05-包走了没有回音-多拨环境里的三种黑洞/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-light.svg" width="410" alt="Package gone, no echo - three black holes in a multi-dial environment (article in Chinese)" /></picture></a>
+<a href="https://windy664.github.io/2026/11/02/2026-11-04-逆向正方教务-课表是拿来盯的/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-light.svg" width="410" alt="Reverse square academic affairs, the class schedule is used to stare at (article in Chinese)" /></picture></a>
 </p>
 <!-- JOURNAL:END -->
 
