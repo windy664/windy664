@@ -18,19 +18,19 @@
   ],
   "posts": [
     {
-      "source_title": "包走了，没有回音-多拨环境里的三种黑洞",
-      "title": "Package gone, no echo - three black holes in a multi-dial environment",
-      "url": "https://windy664.github.io/2026/11/05/2026-11-05-包走了没有回音-多拨环境里的三种黑洞/",
-      "date_label": "Nov 05",
-      "published_at": "2026-11-05T04:00:00+00:00",
+      "source_title": "鼠标绑定时灵时不灵，我在 Hyprland Lua fork 里抓到了 release 幽灵",
+      "title": "When the mouse is bound, the spirit is not working, I caught the release ghost in Hyprland Lua fork",
+      "url": "https://windy664.github.io/2026/11/06/2026-11-06-鼠标绑定时灵时不灵-我在hyprlandluafork里抓到了release幽灵/",
+      "date_label": "Nov 06",
+      "published_at": "2026-11-06T04:00:00+00:00",
       "source_language": "zh"
     },
     {
-      "source_title": "逆向正方教务，课表是拿来盯的",
-      "title": "Reverse square academic affairs, the class schedule is used to stare at",
-      "url": "https://windy664.github.io/2026/11/02/2026-11-04-逆向正方教务-课表是拿来盯的/",
-      "date_label": "Nov 02",
-      "published_at": "2026-11-02T04:00:00+00:00",
+      "source_title": "接上模型之后，我才发现我做的那个闭环是假的",
+      "title": "After I connected the model, I found out that the closed loop I made was fake.",
+      "url": "https://windy664.github.io/2026/11/05/p-95dde96737f0/",
+      "date_label": "Nov 05",
+      "published_at": "2026-11-05T04:00:00+00:00",
       "source_language": "zh"
     }
   ]

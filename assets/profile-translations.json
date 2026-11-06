@@ -1,4 +1,10 @@
 {
+  "11a23ca0fd9954bea7e90bb2689faae768728c1e52c0cc37695eb650c8451cc2": {
+    "engine": "mymemory",
+    "english": "When the mouse is bound, the spirit is not working, I caught the release ghost in Hyprland Lua fork",
+    "provider": "mymemory-zh-en/v1",
+    "source": "鼠标绑定时灵时不灵，我在 Hyprland Lua fork 里抓到了 release 幽灵"
+  },
   "13cf922158b3d32b64aff229eea05aa62df32ae29adcc7441e6cf2d0f508ae54": {
     "engine": "mymemory",
     "english": "On the third day after the critique was written, I switched the main engine to Omarchy",
@@ -64,6 +70,12 @@
     "english": "Next breakdown: On the third day after the critique was written, I switched the main engine to Omarchy",
     "provider": "mymemory-zh-en/v1",
     "source": "下回分解：批判书写完的第三天，我把主力机换血成了 Omarchy"
+  },
+  "f7d814dd907cfeba4d4a06fddde613b20473330a7c64810b5bb5e3911fe0e16b": {
+    "engine": "mymemory",
+    "english": "After I connected the model, I found out that the closed loop I made was fake.",
+    "provider": "mymemory-zh-en/v1",
+    "source": "接上模型之后，我才发现我做的那个闭环是假的"
   },
   "fa2035540b99df4a72810611cf9db39b1a0b0e8ab89dda8e8f55cff246f84eb7": {
     "engine": "mymemory",
