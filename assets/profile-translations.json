@@ -17,6 +17,12 @@
     "provider": "mymemory-zh-en/v1",
     "source": "一切透明的都在卡：我的 GNOME 卡顿批判书，以及我对 Omarchy 的期待"
   },
+  "236978ae48f60fb7f8f743daa0e6a102a70d9449e5237bee429970cf2bfb2586": {
+    "engine": "mymemory",
+    "english": "The upstream lyrics plugin broke and no one repaired it, I rewrote the Omarchy top bar karaoke with Rust",
+    "provider": "mymemory-zh-en/v1",
+    "source": "上游歌词插件坏了没人修，我用 Rust 重写了 Omarchy 顶栏卡拉OK"
+  },
   "3879cafe649893ae9874ccebfb17e6b338902bf11dce43a12c6c590feaca1431": {
     "engine": "mymemory",
     "english": "One Rust app, twenty-seven containers",

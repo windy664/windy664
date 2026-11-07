@@ -14,8 +14,8 @@
 </p>
 <h4>Recent posts</h4>
 <p>
-<a href="https://windy664.github.io/2026/11/06/2026-11-06-鼠标绑定时灵时不灵-我在hyprlandluafork里抓到了release幽灵/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-light.svg" width="410" alt="When the mouse is bound, the spirit is not working, I caught the release ghost in Hyprland Lua fork (article in Chinese)" /></picture></a>
-<a href="https://windy664.github.io/2026/11/05/p-95dde96737f0/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-light.svg" width="410" alt="After I connected the model, I found out that the closed loop I made was fake. (article in Chinese)" /></picture></a>
+<a href="https://windy664.github.io/2026/11/07/2026-11-07-上游歌词插件坏了没人修-我用rust重写了omarchy顶栏卡拉ok/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-0-light.svg" width="410" alt="The upstream lyrics plugin broke and no one repaired it, I rewrote the Omarchy top bar karaoke with Rust (article in Chinese)" /></picture></a>
+<a href="https://windy664.github.io/2026/11/06/2026-11-06-鼠标绑定时灵时不灵-我在hyprlandluafork里抓到了release幽灵/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-posts-1-light.svg" width="410" alt="When the mouse is bound, the spirit is not working, I caught the release ghost in Hyprland Lua fork (article in Chinese)" /></picture></a>
 </p>
 <!-- JOURNAL:END -->
 

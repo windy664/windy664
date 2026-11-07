@@ -18,19 +18,19 @@
   ],
   "posts": [
     {
+      "source_title": "上游歌词插件坏了没人修，我用 Rust 重写了 Omarchy 顶栏卡拉OK",
+      "title": "The upstream lyrics plugin broke and no one repaired it, I rewrote the Omarchy top bar karaoke with Rust",
+      "url": "https://windy664.github.io/2026/11/07/2026-11-07-上游歌词插件坏了没人修-我用rust重写了omarchy顶栏卡拉ok/",
+      "date_label": "Nov 07",
+      "published_at": "2026-11-07T04:00:00+00:00",
+      "source_language": "zh"
+    },
+    {
       "source_title": "鼠标绑定时灵时不灵，我在 Hyprland Lua fork 里抓到了 release 幽灵",
       "title": "When the mouse is bound, the spirit is not working, I caught the release ghost in Hyprland Lua fork",
       "url": "https://windy664.github.io/2026/11/06/2026-11-06-鼠标绑定时灵时不灵-我在hyprlandluafork里抓到了release幽灵/",
       "date_label": "Nov 06",
       "published_at": "2026-11-06T04:00:00+00:00",
-      "source_language": "zh"
-    },
-    {
-      "source_title": "接上模型之后，我才发现我做的那个闭环是假的",
-      "title": "After I connected the model, I found out that the closed loop I made was fake.",
-      "url": "https://windy664.github.io/2026/11/05/p-95dde96737f0/",
-      "date_label": "Nov 05",
-      "published_at": "2026-11-05T04:00:00+00:00",
       "source_language": "zh"
     }
   ]
