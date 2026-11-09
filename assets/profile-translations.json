@@ -29,6 +29,12 @@
     "provider": "mymemory-zh-en/v1",
     "source": "一个 Rust 应用，二十七个容器"
   },
+  "43f2f62c969ba8d66f2a3e4a0214911cea6c070ed1986606720bc6a5888ee727": {
+    "engine": "mymemory",
+    "english": "A conversation moved 8 times in 3 days",
+    "provider": "mymemory-zh-en/v1",
+    "source": "一段对话三天搬了 8 次"
+  },
   "4d33dd83be68e40c654152767a708aa3b8a4e20f671879b42ba1febdbe0f0200": {
     "engine": "mymemory",
     "english": "How is the Rust system maintained by one person iterated?",

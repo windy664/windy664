@@ -1,36 +1,36 @@
 {
-  "current_project": "Ru41",
+  "current_project": "XingtuBot-Spigot",
   "projects": [
-    {
-      "name": "Ru41",
-      "url": "https://github.com/windy664/Ru41",
-      "language": "Rust",
-      "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
-      "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
-    },
     {
       "name": "XingtuBot-Spigot",
       "url": "https://github.com/windy664/XingtuBot-Spigot",
       "language": "Java",
       "description": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis.",
       "summary": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis."
+    },
+    {
+      "name": "Ru41",
+      "url": "https://github.com/windy664/Ru41",
+      "language": "Rust",
+      "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
+      "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
     }
   ],
   "posts": [
+    {
+      "source_title": "一段对话三天搬了 8 次",
+      "title": "A conversation moved 8 times in 3 days",
+      "url": "https://windy664.github.io/2026/11/09/2026-11-09-一段对话三天搬了8次/",
+      "date_label": "Nov 09",
+      "published_at": "2026-11-09T04:00:00+00:00",
+      "source_language": "zh"
+    },
     {
       "source_title": "三个校园网账号，挤两条外线",
       "title": "Three campus network accounts, squeezing two external lines",
       "url": "https://windy664.github.io/2026/11/08/2026-11-08-三个校园网账号挤两条外线/",
       "date_label": "Nov 08",
       "published_at": "2026-11-08T04:00:00+00:00",
-      "source_language": "zh"
-    },
-    {
-      "source_title": "上游歌词插件坏了没人修，我用 Rust 重写了 Omarchy 顶栏卡拉OK",
-      "title": "The upstream lyrics plugin broke and no one repaired it, I rewrote the Omarchy top bar karaoke with Rust",
-      "url": "https://windy664.github.io/2026/11/07/2026-11-07-上游歌词插件坏了没人修-我用rust重写了omarchy顶栏卡拉ok/",
-      "date_label": "Nov 07",
-      "published_at": "2026-11-07T04:00:00+00:00",
       "source_language": "zh"
     }
   ]
