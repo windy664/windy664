@@ -1,36 +1,36 @@
 {
-  "current_project": "XingtuBot-Spigot",
+  "current_project": "Ru41",
   "projects": [
-    {
-      "name": "XingtuBot-Spigot",
-      "url": "https://github.com/windy664/XingtuBot-Spigot",
-      "language": "Java",
-      "description": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis.",
-      "summary": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis."
-    },
     {
       "name": "Ru41",
       "url": "https://github.com/windy664/Ru41",
       "language": "Rust",
       "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
+    },
+    {
+      "name": "XingtuBot-Spigot",
+      "url": "https://github.com/windy664/XingtuBot-Spigot",
+      "language": "Java",
+      "description": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis.",
+      "summary": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis."
     }
   ],
   "posts": [
+    {
+      "source_title": "接上模型之后，我才发现我做的那个闭环是假的",
+      "title": "After I connected the model, I found out that the closed loop I made was fake.",
+      "url": "https://windy664.github.io/2026/11/10/2026-11-10-接上模型之后我才发现我做的那个闭环是假的/",
+      "date_label": "Nov 10",
+      "published_at": "2026-11-10T04:00:00+00:00",
+      "source_language": "zh"
+    },
     {
       "source_title": "一段对话三天搬了 8 次",
       "title": "A conversation moved 8 times in 3 days",
       "url": "https://windy664.github.io/2026/11/09/2026-11-09-一段对话三天搬了8次/",
       "date_label": "Nov 09",
       "published_at": "2026-11-09T04:00:00+00:00",
-      "source_language": "zh"
-    },
-    {
-      "source_title": "三个校园网账号，挤两条外线",
-      "title": "Three campus network accounts, squeezing two external lines",
-      "url": "https://windy664.github.io/2026/11/08/2026-11-08-三个校园网账号挤两条外线/",
-      "date_label": "Nov 08",
-      "published_at": "2026-11-08T04:00:00+00:00",
       "source_language": "zh"
     }
   ]
