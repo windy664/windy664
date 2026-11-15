@@ -1,19 +1,19 @@
 {
-  "current_project": "Ru41",
+  "current_project": "omarchy-daynight",
   "projects": [
+    {
+      "name": "omarchy-daynight",
+      "url": "https://github.com/windy664/omarchy-daynight",
+      "language": "Rust",
+      "description": "Switch the Omarchy theme at real sunrise and sunset. Zero dependencies, self-healing, works offline.",
+      "summary": "Switch the Omarchy theme at real sunrise and sunset. Zero dependencies, self-healing, works offline."
+    },
     {
       "name": "Ru41",
       "url": "https://github.com/windy664/Ru41",
       "language": "Rust",
       "description": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging.",
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
-    },
-    {
-      "name": "XingtuBot-Spigot",
-      "url": "https://github.com/windy664/XingtuBot-Spigot",
-      "language": "Java",
-      "description": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis.",
-      "summary": "🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat & GitHub webhooks. Velocity/Bukkit, multi-server via Redis."
     }
   ],
   "posts": [

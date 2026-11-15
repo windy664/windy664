@@ -9,8 +9,8 @@
 <!-- JOURNAL:START -->
 <h4>On my desk</h4>
 <p>
-<a href="https://github.com/windy664/Ru41"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-light.svg" width="410" alt="Ru41 — 🤖 Rust + Codex personal automation assistant — Obsidian, information workflows &amp; messaging." /></picture></a>
-<a href="https://github.com/windy664/XingtuBot-Spigot"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-light.svg" width="410" alt="XingtuBot-Spigot — 🌉 QQ ↔ Minecraft bridge bot — whitelist binding, two-way chat, mod search, LLM group chat &amp; GitHub webhooks. Velocity/Bukkit, multi-server via Redis." /></picture></a>
+<a href="https://github.com/windy664/omarchy-daynight"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-light.svg" width="410" alt="omarchy-daynight — Switch the Omarchy theme at real sunrise and sunset. Zero dependencies, self-healing, works offline." /></picture></a>
+<a href="https://github.com/windy664/Ru41"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-light.svg" width="410" alt="Ru41 — 🤖 Rust + Codex personal automation assistant — Obsidian, information workflows &amp; messaging." /></picture></a>
 </p>
 <h4>Recent posts</h4>
 <p>
