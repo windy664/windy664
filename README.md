@@ -10,7 +10,7 @@
 <h4>On my desk</h4>
 <p>
 <a href="https://github.com/windy664/Ru41"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-0-light.svg" width="410" alt="Ru41 — 🤖 Rust + Codex personal automation assistant — Obsidian, information workflows &amp; messaging." /></picture></a>
-<a href="https://github.com/windy664/omarchy-daynight"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-light.svg" width="410" alt="omarchy-daynight — Switch the Omarchy theme at real sunrise and sunset. Zero dependencies, self-healing, works offline." /></picture></a>
+<a href="https://github.com/windy664/git-sync"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-dark.svg" /><img src="https://raw.githubusercontent.com/windy664/windy664/master/assets/profile-projects-1-light.svg" width="410" alt="git-sync — Two-way git sync for setups where the machine that can merge lives on a LAN." /></picture></a>
 </p>
 <h4>Recent posts</h4>
 <p>

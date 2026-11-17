@@ -9,11 +9,11 @@
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
     },
     {
-      "name": "omarchy-daynight",
-      "url": "https://github.com/windy664/omarchy-daynight",
+      "name": "git-sync",
+      "url": "https://github.com/windy664/git-sync",
       "language": "Rust",
-      "description": "Switch the Omarchy theme at real sunrise and sunset. Zero dependencies, self-healing, works offline.",
-      "summary": "Switch the Omarchy theme at real sunrise and sunset. Zero dependencies, self-healing, works offline."
+      "description": "Two-way git sync for setups where the machine that can merge lives on a LAN.",
+      "summary": "Two-way git sync for setups where the machine that can merge lives on a LAN."
     }
   ],
   "posts": [
