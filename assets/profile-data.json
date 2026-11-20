@@ -9,28 +9,28 @@
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
     },
     {
-      "name": "git-sync",
-      "url": "https://github.com/windy664/git-sync",
-      "language": "Rust",
-      "description": "Two-way git sync for setups where the machine that can merge lives on a LAN.",
-      "summary": "Two-way git sync for setups where the machine that can merge lives on a LAN."
+      "name": "PlayerShelter",
+      "url": "https://github.com/windy664/PlayerShelter",
+      "language": "Java",
+      "description": "一个高版本的家园插件",
+      "summary": "A higher version of the Home plugin"
     }
   ],
   "posts": [
+    {
+      "source_title": "垂直领域下的AI生成游戏任务之思考",
+      "title": "Reflections on AI-generated game tasks in vertical domains",
+      "url": "https://windy664.github.io/2026/11/20/p-39a044cc86dc/",
+      "date_label": "Nov 20",
+      "published_at": "2026-11-20T04:00:00+00:00",
+      "source_language": "zh"
+    },
     {
       "source_title": "接上模型之后，我才发现我做的那个闭环是假的",
       "title": "After I connected the model, I found out that the closed loop I made was fake.",
       "url": "https://windy664.github.io/2026/11/10/2026-11-10-接上模型之后我才发现我做的那个闭环是假的/",
       "date_label": "Nov 10",
       "published_at": "2026-11-10T04:00:00+00:00",
-      "source_language": "zh"
-    },
-    {
-      "source_title": "一段对话三天搬了 8 次",
-      "title": "A conversation moved 8 times in 3 days",
-      "url": "https://windy664.github.io/2026/11/09/2026-11-09-一段对话三天搬了8次/",
-      "date_label": "Nov 09",
-      "published_at": "2026-11-09T04:00:00+00:00",
       "source_language": "zh"
     }
   ]
