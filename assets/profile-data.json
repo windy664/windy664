@@ -9,11 +9,11 @@
       "summary": "🤖 Rust + Codex personal automation assistant — Obsidian, information workflows & messaging."
     },
     {
-      "name": "PlayerShelter",
-      "url": "https://github.com/windy664/PlayerShelter",
-      "language": "Java",
-      "description": "一个高版本的家园插件",
-      "summary": "A higher version of the Home plugin"
+      "name": "omarchy-random-wallpaper",
+      "url": "https://github.com/windy664/omarchy-random-wallpaper",
+      "language": "Rust",
+      "description": "A wallpaper rotator for Omarchy that only picks landscapes and city skylines, and never repeats itself",
+      "summary": "A wallpaper rotator for Omarchy that only picks landscapes and city skylines, and never repeats itself"
     }
   ],
   "posts": [
